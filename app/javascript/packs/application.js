@@ -1,6 +1,8 @@
 import "bootstrap";
 
-// Stimulus
+import Rails from 'rails-ujs';
+Rails.start();
+
 import { Application } from "stimulus"
 import { definitionsFromContext } from "stimulus/webpack-helpers"
 
