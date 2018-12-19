@@ -1,0 +1,16 @@
+#quiz_results {
+  .fa-trophy {
+    color: #FFC107;
+    display: none;
+  }
+
+  .leader {
+    .fa-trophy {
+      display: inline-block;
+    }
+  }
+
+  .me {
+    background: #222e9a;
+  }
+}
