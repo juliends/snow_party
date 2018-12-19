@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+  get 'leads/create'
   mount ActionCable.server => "/cable"
 
   devise_for :users
   devise_for :players, controllers: {
     registrations: 'players/registrations'
   }
+
+  resources :leads, only: :create
 
   root to: 'pages#home'
   resources :quizzes, only: [:index, :show] do
