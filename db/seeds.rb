@@ -1,3 +1,5 @@
+GameAnswer.destroy_all
+Game.destroy_all
 Answer.destroy_all
 Question.destroy_all
 Quiz.destroy_all
@@ -20,6 +22,16 @@ quiz = Quiz.create(
   2.times do
     Answer.create(question: question, content: "This is answer false", correct: false)
   end
+end
+
+game = Game.create(player: player, quiz: quiz, score: 1600)
+quiz.questions.each do |question|
+  GameAnswer.create(
+    game: game,
+    answer: question.answers.sample,
+    start_at: Time.zone.now,
+    ends_at: Time.zone.now + (4..9).to_a.sample
+  )
 end
 
 puts "Seeded 🌱"
