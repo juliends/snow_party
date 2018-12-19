@@ -11,6 +11,8 @@
                   input_html: { autocomplete: "email" }%>
     </div>
 
+    <%= f.input :quizz_id, as: :hidden, input_html: { value: @quizz_id } %>
+
     <div class="form-actions">
       <%= f.button :submit, "Sign up" %>
     </div>
