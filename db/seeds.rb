@@ -1,3 +1,5 @@
+GameAnswer.destroy_all
+Game.destroy_all
 Answer.destroy_all
 Question.destroy_all
 Quiz.destroy_all
