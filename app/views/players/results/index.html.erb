@@ -14,7 +14,7 @@
       <% @games.each_with_index do |game, index| %>
         <tr>
           <th scope="row" class="text-white"><%= index + 1 %></th>
-          <td><%= game.player.email.split('@')[0] %></td>
+          <td><%= game.player.email.split('@')[0].capitalize %></td>
           <td><%= game.score %></td>
         </tr>
       <% end %>
