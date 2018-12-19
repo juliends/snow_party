@@ -20,5 +20,21 @@ class Game < ApplicationRecord
   def compute_score
     computed_score = game_answers.sum { |game_answer| game_answer.compute_score }
     update(score: computed_score)
+    broadcast_results
+  end
+
+  private
+
+  def broadcast_results
+    ActionCable.server.broadcast("quiz_results_#{quiz.id}", {
+      message_partial: ApplicationController.renderer.render(
+        partial: "players/results/results_table",
+        locals: {
+          games: quiz.games.where.not(score: 0).order(score: :desc),
+          quiz: self.quiz,
+          player_id: player.id
+        }
+      )
+    })
   end
 end
