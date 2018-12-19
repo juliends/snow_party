@@ -12,6 +12,9 @@ Rails.application.routes.draw do
     resources :quizzes, only: :show do
       resources :games, only: [:create]
     end
-    resources :games, only: [:show]
+    resources :games, only: [:show] do
+      resources :game_answers, only: :create
+      resources :results, only: :index
+    end
   end
 end
