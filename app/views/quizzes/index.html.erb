@@ -1,0 +1,36 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-6">
+      <h1>All quizzes</h1>
+    </div>
+    <div class="col-6">
+      <%= link_to "New Quiz", "New Quiz", class: "btn btn-primary" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Nom</th>
+            <th scope="col">Numéro de salle</th>
+            <th scope="col">Récompense</th>
+            <th scope="col">Participants</th>
+            <th scope="col">Date de création</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @quizzes.each do |quiz| %>
+            <tr>
+              <td><%= quiz.name %></td>
+              <td><%= quiz.room %></td>
+              <td><%= quiz.reward %></td>
+              <td><%= quiz.games.count %></td>
+              <td><%= quiz.created_at.strftime("%m/%d/%Y") %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
