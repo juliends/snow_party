@@ -10,7 +10,7 @@
       <% @question.answers.each do |answer| %>
         <%= simple_form_for([:players, @game, @game_answer]) do |f| %>
           <%= f.input :answer_id, as: :hidden, input_html: { value: answer.id } %>
-          <%= f.submit answer.content, class: "btn btn-light btn-lg btn-block my-3 btn-answers", data: { target: "answers.button", action:"answers#handleClick", correct: answer.correct? } %>
+          <%= f.submit answer.content, class: "btn btn-light btn-lg btn-block my-3 btn-answers", data: { target: "answers.button", action:"click->answers#handleClick touchend->answers#handleClick", correct: answer.correct? } %>
         <% end %>
       <% end %>
     </div>
