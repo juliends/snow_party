@@ -1,9 +1,9 @@
 <div id="qr_code">
   <div class="qr-instructions">
-    <h1 class="text-white mb-5">
+    <h5 class="text-white mb-5">
       Scannez ce <code>QR-Code</code> et tentez de gagner une place de cinéma
-    </h1>
-    <%= image_tag 'hand-hold-smart-phone-scanning-qr-code-icon-vector-18307815', height: '100%', class: 'qr-instructions-img' %>
+    </h5>
+    <%= image_tag 'hand.jpg', height: '100%', class: 'qr-instructions-img' %>
   </div>
   <div class="qr_square">
     <%= @qr_code.as_svg.html_safe %>
