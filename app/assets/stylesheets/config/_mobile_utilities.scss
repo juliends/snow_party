@@ -1,16 +1,32 @@
 .mobile-container {
   min-height: 100vh;
+  .btn {
+    box-shadow: 0 6px 20px 0 rgba(0,0,0,.19);
+    &:active {
+      box-shadow: 0 6px 20px 0 rgba(0,0,0,.19);
+    }
+  }
+  ul {
+    color: whitesmoke;
+    font-weight: 100;
+    strong {
+      color: white;
+      font-weight: 500;
+    }
+  }
+  tbody {
+    font-weight: 100;
+    th {
+      color: white;
+    }
+    tr {
+      color: whitesmoke;
+    }
+  }
   // fallback for old browsers
   background: #1488CC;
   // Chrome 10-25, Safari 5.1-6
   background: -webkit-linear-gradient(to top, #2B32B2, #1488CC);
   // W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
   background: linear-gradient(to top, #2B32B2, #1488CC);
-}
-
-.btn {
-  box-shadow: 0 6px 20px 0 rgba(0,0,0,.19);
-  &:active {
-    box-shadow: 0 6px 20px 0 rgba(0,0,0,.19);
-  }
 }
