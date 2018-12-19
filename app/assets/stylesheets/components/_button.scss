@@ -1,0 +1,9 @@
+
+.reveal-answers .btn-answers {
+  &[data-correct='true'] {
+    background: $green;
+  }
+  &[data-correct='false'] {
+    background: $red;
+  }
+}
