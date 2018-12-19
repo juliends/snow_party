@@ -6,4 +6,10 @@ class Player < ApplicationRecord
 
   has_many :games
   has_many :quizzes, through: :games
+
+  private
+
+  def password_required?
+    false
+  end
 end
