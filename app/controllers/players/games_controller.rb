@@ -12,6 +12,7 @@ class Players::GamesController < Players::BaseController
 
   def show
     @game = Game.find(params[:id])
+    @question = @game.latest_question
     authorize [:player, @game]
   end
 end

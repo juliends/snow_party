@@ -1,1 +1,16 @@
-THis is the first question
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1><%= @question.content %></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <ul>
+        <% @question.answers.each do |answer| %>
+          <li><%= link_to answer.content, "#", class: "btn btn-primary", method: :post %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
