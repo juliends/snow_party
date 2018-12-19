@@ -12,9 +12,9 @@ class Players::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
-    @quiz = Quiz.find(params[:player][:quizz_id])
-    raise
     super
+    @quiz = Quiz.find(params[:player][:quizz_id])
+    redirect_to players_quiz_path(@quiz)
   end
 
   # GET /resource/edit

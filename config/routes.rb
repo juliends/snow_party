@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :quizzes, only: [:index, :show]
+  namespace :players do
+    resources :quizzes, only: [:show]
+  end
 end
