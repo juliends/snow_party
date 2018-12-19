@@ -1,0 +1,20 @@
+<table class="table table-sm" id="quiz_results" data-quiz-id="<%= quiz.id %>">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th></th>
+      <th scope="col">Joueur</th>
+      <th scope="col">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% games.each_with_index do |game, index| %>
+      <tr class="<%= 'leader' if index == 0 %><%= ' me' if game.player.id == player_id %>">
+        <th scope="row" class="text-white"><%= index + 1 %></th>
+        <td><i class="fas fa-trophy"></i></td>
+        <td><%= game.player.email.split('@')[0].capitalize %></td>
+        <td><%= game.score %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

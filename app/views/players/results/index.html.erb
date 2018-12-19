@@ -2,22 +2,10 @@
   <h3 class="text-center text-white pb-4">
     Résultats
   </h3>
-  <table class="table table-sm">
-    <thead class="thead-light">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Joueur</th>
-        <th scope="col">Score</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @games.each_with_index do |game, index| %>
-        <tr>
-          <th scope="row" class="text-white"><%= index + 1 %></th>
-          <td><%= game.player.email.split('@')[0].capitalize %></td>
-          <td><%= game.score %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+  <%= render 'results_table',
+    games: @games,
+    quiz: @quiz,
+    player_id: current_player.id
+  %>
 </div>
+<%= render 'shared/players_counter', quiz: @quiz %>
