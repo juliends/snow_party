@@ -27,6 +27,11 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     if resource.class == User
       quizzes_path
+    elsif resource.class == Player
+      quiz_id = params[:quiz] || params[:player][:quiz]
+      @quiz = Quiz.find(quiz_id)
+      sign_in(resource) unless current_player
+      players_quiz_path(@quiz)
     else
       request.env['omniauth.origin'] || stored_location_for(resource) || root_path
     end
