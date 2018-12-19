@@ -10,10 +10,6 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <% unless @no_nav %>
-      <%= render 'shared/navbar' if @desktop %>
-    <% end %>
-    <%= render 'shared/flashes' if @desktop  %>
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>

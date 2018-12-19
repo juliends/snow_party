@@ -1,16 +1,26 @@
 <div class="container">
-  <div class="row">
-    <div class="col">
-      <h1>Results</h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <ol>
-        <% @games.each do |game| %>
-          <li><%= game.player.email %> - <%= game.score %> points</li>
+  <div class="mobile-container d-flex flex-column justify-content-center">
+    <h3 class="text-center text-info pb-4">
+      Classement
+    </h3>
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Player</th>
+          <th scope="col">Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @games.each_with_index do |game, index| %>
+          <tr>
+            <th scope="row"><%= index + 1 %></th>
+            <td><%= game.player.email %></td>
+            <td><%= game.score %></td>
+          </tr>
         <% end %>
-      </ol>
-    </div>
+      </tbody>
+    </table>
+    <h4 class="text-center text-info mt-1">Eteignez votre téléphone,<br>la séance va commencer !</h4>
   </div>
 </div>

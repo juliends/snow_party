@@ -16,4 +16,9 @@ class Game < ApplicationRecord
   def other_games_for_same_quiz
     self.class.time_related(self)
   end
+
+  def compute_score
+    computed_score = game_answers.sum { |game_answer| game_answer.compute_score }
+    update(score: computed_score)
+  end
 end
