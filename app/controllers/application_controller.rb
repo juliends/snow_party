@@ -27,7 +27,8 @@ class ApplicationController < ActionController::Base
     if resource.class == User
       quizzes_path
     else
-      request.env['omniauth.origin'] || stored_location_for(resource) || root_path
+      # request.env['omniauth.origin'] || stored_location_for(resource) || root_path
+      players_quiz_path(Quiz.first)
     end
   end
 end
