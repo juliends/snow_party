@@ -1,0 +1,23 @@
+div#player-counter {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: white;
+  border-radius: 10%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid black;
+
+  .number {
+    font-size: 2em;
+    line-height: 1;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
