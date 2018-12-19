@@ -10,7 +10,8 @@ div#player-counter {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 2px solid black;
+  // border: 2px solid black;
+  box-shadow: 0 6px 20px 0 rgba(0,0,0,.19);
 
   .number {
     font-size: 2em;
