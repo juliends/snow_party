@@ -16,14 +16,6 @@ quiz = Quiz.create(
         room: "3"
       )
 
-# 3.times do |i|
-#   question = Question.create(content: "This is question #{i}", quiz: quiz)
-#   Answer.create(question: question, content: "This is an answer true", correct: true)
-#   2.times do
-#     Answer.create(question: question, content: "This is answer false", correct: false)
-#   end
-# end
-
 question1 = Question.create(content: "Dans « Astérix et Le secret de la Potion magique »", quiz: quiz)
 Answer.create(question: question1,
               content: "Guillaume Briat",
