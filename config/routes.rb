@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :players do
+    get 'game_answers/create'
+  end
   devise_for :players
   devise_for :users
   root to: 'pages#home'
@@ -8,6 +11,9 @@ Rails.application.routes.draw do
     resources :quizzes, only: :show do
       resources :games, only: [:create]
     end
-    resources :games, only: [:show]
+    resources :games, only: [:show] do
+      resources :game_answers, only: :create
+      resources :results, only: :index
+    end
   end
 end
