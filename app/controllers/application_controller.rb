@@ -23,6 +23,7 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  # Only for sign in/up of User
   def after_sign_in_path_for(resource)
     if resource.class == User
       quizzes_path
