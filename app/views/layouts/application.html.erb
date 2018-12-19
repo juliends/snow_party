@@ -12,7 +12,6 @@
   <body>
     <% unless @no_nav %>
       <%= render 'shared/navbar' if @desktop %>
-      <%= render 'shared/navbar_mobile' unless @desktop %>
     <% end %>
     <%= render 'shared/flashes' if @desktop  %>
     <%= yield %>
