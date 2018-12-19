@@ -1,11 +1,11 @@
 div#player-counter {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  background: white;
+  top: 15px;
+  right: 15px;
+  background: #F8F9FA;
   border-radius: 10%;
-  width: 80px;
-  height: 80px;
+  width: 72px;
+  height: 72px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +14,7 @@ div#player-counter {
   box-shadow: 0 6px 20px 0 rgba(0,0,0,.19);
 
   .number {
-    font-size: 2em;
+    font-size: 1.68em;
     line-height: 1;
   }
 

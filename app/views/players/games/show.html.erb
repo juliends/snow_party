@@ -8,9 +8,9 @@
   <div class="row justify-content-center">
     <div class="col-10 col-sm-8 col-md-6 col-lg-4">
       <% @question.answers.each do |answer| %>
-        <%= simple_form_for([:players, @game, @game_answer]) do |f| %>
+        <%= simple_form_for([:players, @game, @game_answer], html: { id: "answer_form_#{answer.id}" }) do |f| %>
           <%= f.input :answer_id, as: :hidden, input_html: { value: answer.id } %>
-          <%= f.submit answer.content, class: "btn btn-light btn-lg btn-block my-3 btn-answers", data: { target: "answers.button", action:"click->answers#handleClick touchstart->answers#handleClick", correct: answer.correct? } %>
+          <%= f.submit answer.content, class: "btn btn-light btn-lg btn-block my-3 btn-answers", data: { target: "answers.button", action:"click->answers#handleClick touchstart->answers#handleClick", correct: answer.correct?, form_id: "answer_form_#{answer.id}" } %>
         <% end %>
       <% end %>
     </div>
