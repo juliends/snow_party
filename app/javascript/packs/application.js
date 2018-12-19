@@ -12,3 +12,6 @@ Turbolinks.start();
 const application = Application.start();
 const controllers = require.context('../controllers', true, /\.js$/);
 application.load(definitionsFromContext(controllers));
+
+import initCounter from "../cables/players_counter"
+initCounter();

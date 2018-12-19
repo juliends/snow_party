@@ -6,6 +6,7 @@ class Players::GameAnswersController < Players::BaseController
     @game_answer.game = @game
     authorize [:player, @game_answer]
     if @game_answer.save
+      sleep(1)
       redirect_to players_game_path @game
     else
       @question = @game_answer.answer.question
