@@ -7,6 +7,11 @@ class Player < ApplicationRecord
   has_many :games
   has_many :quizzes, through: :games
 
+  def username
+    email.split('@').first
+    raise
+  end
+
   private
 
   def password_required?
