@@ -7,7 +7,11 @@ User.destroy_all
 Player.destroy_all
 
 owner = User.create(email: "test@test.com", password: "123123")
-player = Player.create(email: "player@test.com")
+player1 = Player.create(email: "george@abitbol.com")
+player2 = Player.create(email: "monica@belucci.it")
+player3 = Player.create(email: "jean@dujardin.fr")
+player4 = Player.create(email: "quentin@dupieux.fr")
+player5 = Player.create(email: "eric@judor.fr")
 
 quiz = Quiz.create(
         user: owner,
@@ -49,7 +53,7 @@ Answer.create(question: question3,
               content: "Blanche Neige",
               correct: false)
 
-question4 = Question.create(content: "dans quelle ville se déroule LETO ?", quiz: quiz)
+question4 = Question.create(content: "Dans quelle ville se déroule LETO ?", quiz: quiz)
 Answer.create(question: question4,
               content: "Leningrad",
               correct: true)
@@ -79,9 +83,9 @@ Answer.create(question: question6,
               content: "NON",
               correct: true)
 
-question7 = Question.create(content: "Trouvez vous ce cinéma propre et accueillant ?", quiz: quiz)
+question7 = Question.create(content: "Trouvez-vous ce cinéma propre et accueillant ?", quiz: quiz)
 Answer.create(question: question7,
-              content: "Au poil",
+              content: "Parfait",
               correct: true)
 Answer.create(question: question7,
               content: "Peut mieux faire",
@@ -90,10 +94,15 @@ Answer.create(question: question7,
               content: "Laisse à désirer",
               correct: true)
 
-game = Game.create(player: player, quiz: quiz, score: 1600)
+game1 = Game.create(player: player1, quiz: quiz, score: 1600)
+game2 = Game.create(player: player2, quiz: quiz, score: 1400)
+game3 = Game.create(player: player3, quiz: quiz, score: 1300)
+game4 = Game.create(player: player4, quiz: quiz, score: 1200)
+game5 = Game.create(player: player5, quiz: quiz, score: 1100)
+
 quiz.questions.each do |question|
   GameAnswer.create(
-    game: game,
+    game: game1,
     answer: question.answers.sample,
     start_at: Time.zone.now,
     ends_at: Time.zone.now + (4..9).to_a.sample
