@@ -1,0 +1,32 @@
+#qr_code {
+  // background-color: black;
+  // svg rect {
+  //   fill: white !important;
+  // }
+  .qr_square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 563px;
+    height: 563px;
+    background-color: white;
+    border-radius: 5%;
+  }
+  .qr-instructions {
+    position: absolute;
+    bottom: 30%;
+    left: 13%;
+    width: 192px;
+    height: 192px;
+    border-radius: 5%;
+    .qr-instructions-img {
+      border-radius: 5%;
+    }
+  }
+  // fallback for old browsers
+  background: #141E30;
+  // Chrome 10-25, Safari 5.1-6
+  background: -webkit-linear-gradient(to top, #243B55, #141E30);
+  // W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
+  background: linear-gradient(to top, #243B55, #141E30,);
+}
