@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   }
 
   root to: 'pages#home'
-
-  resources :quizzes, only: [:index, :show]
-
+  resources :quizzes, only: [:index, :show] do
+    get "qr"
+  end
   namespace :players do
     resources :quizzes, only: :show do
       resources :games, only: [:create]
