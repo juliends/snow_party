@@ -1,5 +1,8 @@
 <div class="container">
-  <h2>Entrez votre adresse e-mail pour commencer..</h2>
+  <div class="container mobile-container d-flex flex-column justify-content-center">
+  <h5 class="text-center mb-3">
+    Entrez votre adresse e-mail pour commencer à jouer
+  </h5>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
@@ -8,13 +11,16 @@
       <%= f.input :email,
                   required: true,
                   autofocus: true ,
-                  input_html: { autocomplete: "email" }%>
+                  input_html: { autocomplete: "email" },
+                  label: false,
+                  placeholder: "Email"%>
     </div>
 
-    <div class="form-actions">
-      <%= f.button :submit, "Sign up" %>
+    <div class="form-actions text-center mt-4">
+      <%= f.button :submit, "SUIVANT" %>
     </div>
   <% end %>
 
-  <%= render "players/shared/links" %>
+  <%#= render "players/shared/links" %>
+  </div>
 </div>
