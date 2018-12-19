@@ -11,11 +11,9 @@ class Players::RegistrationsController < Devise::RegistrationsController
   end
 
   # POST /resource
-  def create
-    super
-    @quiz = Quiz.find(params[:player][:quizz_id])
-    redirect_to players_quiz_path(@quiz)
-  end
+  # def create
+  #   super
+  # end
 
   # GET /resource/edit
   # def edit
@@ -54,9 +52,11 @@ class Players::RegistrationsController < Devise::RegistrationsController
   # end
 
   # The path used after sign up.
-  # def after_sign_up_path_for(resource)
-  #   super(resource)
-  # end
+  def after_sign_up_path_for(resource)
+    super(resource)
+    @quiz = Quiz.find(params[:player][:quizz_id])
+    players_quiz_path(@quiz)
+  end
 
   # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)
