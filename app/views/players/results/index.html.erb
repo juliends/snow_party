@@ -1,11 +1,10 @@
-<div class="container mobile-container d-flex flex-column justify-content-center">
+<div class="container mobile-container d-flex flex-column justify-content-center" id="results-page" data-current-player-id="<%= current_player.id %>">
   <h3 class="text-center text-white pb-4">
     Résultats
   </h3>
   <%= render 'results_table',
     games: @games,
-    quiz: @quiz,
-    player_id: current_player.id
+    quiz: @quiz
   %>
 </div>
 <%= render 'shared/players_counter', quiz: @quiz %>
