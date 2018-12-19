@@ -1,10 +1,17 @@
 <div class="container mt-4">
   <div class="row">
     <div class="col-6">
-      <h1>All quizzes</h1>
+      <h1>Quiz <%= @quiz.name %></h1>
     </div>
-    <div class="col-6">
-      <%= link_to "New Quiz", "New Quiz", class: "btn btn-primary" %>
+    <div class="col-6 d-flex justify-content-around">
+      <p>
+        <i class="fas fa-film"></i>
+        <%= @quiz.room %>
+      </p>
+      <p>
+        <i class="far fa-user"></i>
+        <%= @quiz.games.count %> participant
+      </p>
     </div>
   </div>
   <div class="row">
@@ -20,13 +27,9 @@
           </tr>
         </thead>
         <tbody>
-          <% @quizzes.each do |quiz| %>
+          <% @quiz.players.each do |player| %>
               <tr>
-                <td><%= link_to quiz.name, quiz_path(quiz) %></td>
-                <td><%= quiz.room %></td>
-                <td><%= quiz.reward %></td>
-                <td><%= quiz.games.count %></td>
-                <td><%= quiz.created_at.strftime("%m/%d/%Y") %></td>
+                <td><%= player.name %></td>
               </tr>
           <% end %>
         </tbody>
