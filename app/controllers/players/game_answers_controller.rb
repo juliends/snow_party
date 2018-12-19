@@ -13,7 +13,6 @@ class Players::GameAnswersController < Players::BaseController
     end
   end
 
-
   private
 
   def game_answer_params

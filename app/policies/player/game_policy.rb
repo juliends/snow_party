@@ -1,7 +1,7 @@
 class Player::GamePolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
+      scope.order(score: :desc)
     end
   end
   def create?
