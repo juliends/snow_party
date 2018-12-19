@@ -1,3 +1,17 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%= current_player.username %>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>CinePursuit</h1>
+      <p>Interagissez avec vos spectateurs, dans la salle de cinéma</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h5>Vous etes interressés? Laissez nous vous tenir au courant.</h5>
+      <%= simple_form_for(Lead.new) do |f| %>
+        <%= f.input :email, require: true %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>

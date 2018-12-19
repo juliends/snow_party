@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_19_202105) do
+ActiveRecord::Schema.define(version: 2018_12_19_204710) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,12 @@ ActiveRecord::Schema.define(version: 2018_12_19_202105) do
     t.index ["quiz_id"], name: "index_games_on_quiz_id"
   end
 
+  create_table "leads", force: :cascade do |t|
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "players", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -76,8 +82,8 @@ ActiveRecord::Schema.define(version: 2018_12_19_202105) do
     t.string "room"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "live_players", default: 0
     t.boolean "playable", default: false
+    t.integer "live_players", default: 0
     t.index ["user_id"], name: "index_quizzes_on_user_id"
   end
 

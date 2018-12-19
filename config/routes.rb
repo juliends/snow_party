@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     registrations: 'players/registrations'
   }
 
+  resources :leads, only: :create
+
   root to: 'pages#home'
   resources :quizzes, only: [:index, :show] do
     get "qr"

@@ -1,15 +1,19 @@
-import "bootstrap";
-
+// external imports
+import 'bootstrap';
 import Rails from 'rails-ujs';
+import Turbolinks from 'turbolinks';
+import { Application } from 'stimulus';
+import { definitionsFromContext } from 'stimulus/webpack-helpers';
+
 Rails.start();
+Turbolinks.start();
 
-import { Application } from "stimulus"
-import { definitionsFromContext } from "stimulus/webpack-helpers"
-import initCounter from "../cables/players_counter"
-import initResultsTable from "../cables/quiz_results"
+// init stimulus
+const application = Application.start();
+const controllers = require.context('../controllers', true, /\.js$/);
+application.load(definitionsFromContext(controllers));
 
-const application = Application.start()
-const context = require.context("../controllers", true, /\.js$/);
-application.load(definitionsFromContext(context))
+import initCounter from "../cables/players_counter";
+import initResultsTable from "../cables/quiz_results";
 initCounter();
 initResultsTable();
