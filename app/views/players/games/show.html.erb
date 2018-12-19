@@ -1,20 +1,15 @@
-<div class="container">
-  <div class="container mobile-container d-flex flex-column justify-content-center">
-    <h5 class="text-center mb-5">
-      Dans « Astérix et Le secret de la Potion magique », qui fait la voix de Astérix ?
-    </h5>
-    <div class="row justify-content-center">
-      <div class="col-10 col-sm-8 col-md-6 col-lg-4">
-        <button class="btn btn-info btn-lg btn-block my-2">
-          Guillaume Briat
-        </button>
-        <button class="btn btn-info btn-lg btn-block my-2">
-          Daniel Mesguich
-        </button>
-        <button class="btn btn-info btn-lg btn-block my-2">
-          Christian Clavier
-        </button>
-      </div>
+<div class="container mobile-container d-flex flex-column justify-content-center">
+  <h5 class="text-center mb-5">
+    <%= @question.content %>
+  </h5>
+  <div class="row justify-content-center">
+    <div class="col-10 col-sm-8 col-md-6 col-lg-4">
+      <% @question.answers.each do |answer| %>
+        <%= simple_form_for([:players, @game, @game_answer]) do |f| %>
+          <%= f.input :answer_id, as: :hidden, input_html: { value: answer.id } %>
+          <%= f.submit answer.content, class: "btn btn-info btn-lg btn-block my-2" %>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>
