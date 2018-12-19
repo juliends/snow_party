@@ -23,7 +23,7 @@
           <% @quizzes.each do |quiz| %>
               <tr>
                 <td><%= link_to quiz.name, quiz_path(quiz) %></td>
-                <td><%= quiz.room %></td>
+                <td>Salle <%= quiz.room %></td>
                 <td><%= quiz.reward %></td>
                 <td><%= quiz.games.count %></td>
                 <td><%= quiz.created_at.strftime("%m/%d/%Y") %></td>

@@ -22,4 +22,16 @@ quiz = Quiz.create(
   end
 end
 
+game = Game.create(player: player, quiz: quiz)
+quiz.questions.each do |question|
+  GameAnswer.create(
+    game: game,
+    answer: question.answers.sample,
+    start_at: Time.zone.now,
+    ends_at: Time.zone.now + (4..9).to_a.sample
+  )
+end
+game.score = 1600
+game.save
+
 puts "Seeded 🌱"
