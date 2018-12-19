@@ -33,7 +33,8 @@ class ApplicationController < ActionController::Base
       sign_in(resource) unless current_player
       players_quiz_path(@quiz)
     else
-      request.env['omniauth.origin'] || stored_location_for(resource) || root_path
+      # request.env['omniauth.origin'] || stored_location_for(resource) || root_path
+      players_quiz_path(Quiz.first)
     end
   end
 end
