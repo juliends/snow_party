@@ -2,7 +2,7 @@
   class="container mobile-container d-flex flex-column justify-content-center"
   data-controller="answers"
 >
-  <h5 class="text-center mb-5">
+  <h5 class="text-center text-light mb-5">
     <%= @question.content %>
   </h5>
   <div class="row justify-content-center">
@@ -10,7 +10,7 @@
       <% @question.answers.each do |answer| %>
         <%= simple_form_for([:players, @game, @game_answer]) do |f| %>
           <%= f.input :answer_id, as: :hidden, input_html: { value: answer.id } %>
-          <%= f.submit answer.content, class: "btn btn-info btn-lg btn-block my-3 btn-answers", data: { target: "answers.button", action:"answers#handleClick", correct: answer.correct? } %>
+          <%= f.submit answer.content, class: "btn btn-light btn-lg btn-block my-3 btn-answers", data: { target: "answers.button", action:"answers#handleClick", correct: answer.correct? } %>
         <% end %>
       <% end %>
     </div>

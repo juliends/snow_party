@@ -29,7 +29,7 @@ class ApplicationController < ActionController::Base
       quizzes_path
     elsif resource.class == Player
       quiz_id = params[:quiz] || params[:player][:quiz]
-      @quiz = Quiz.find(quiz_id)
+      @quiz = Quiz.find_by(playable: true)
       sign_in(resource) unless current_player
       players_quiz_path(@quiz)
     else
