@@ -9,7 +9,6 @@ class Player < ApplicationRecord
 
   def username
     email.split('@').first
-    raise
   end
 
   private
