@@ -17,7 +17,8 @@ quiz = Quiz.create(
         user: owner,
         name: "Super Burger Quiz",
         reward: "1 place gratuite",
-        room: "3"
+        room: "3",
+        playable: true
       )
 
 question1 = Question.create(content: "Dans « Astérix et Le secret de la Potion magique », qui fait la voix de Astérix ?", quiz: quiz)
