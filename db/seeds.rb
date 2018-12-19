@@ -16,7 +16,7 @@ quiz = Quiz.create(
         room: "3"
       )
 
-question1 = Question.create(content: "Dans « Astérix et Le secret de la Potion magique »", quiz: quiz)
+question1 = Question.create(content: "Dans « Astérix et Le secret de la Potion magique », qui fait la voix de Astérix ?", quiz: quiz)
 Answer.create(question: question1,
               content: "Guillaume Briat",
               correct: false)
@@ -60,67 +60,34 @@ Answer.create(question: question4,
               content: "Stalingrad",
               correct: false)
 
-question5 = Question.create(content: "Utøya a un particularisme, lequel ?", quiz: quiz)
+question5 = Question.create(content: "Combien de spectateurs sont venus au cinéma en 2017 ?", quiz: quiz)
 Answer.create(question: question5,
-              content: "Il est tourné en stop motion",
-              correct: false)
-Answer.create(question: question5,
-              content: "Il est tourné en un plan séquence",
-              correct: true)
-Answer.create(question: question5,
-              content: "Il n’a pas de musique",
-              correct: true)
-
-question6 = Question.create(content: "L’empereur de Paris est la seconde adaptation au cinéma de l’histoire de Vidocq, la première était :", quiz: quiz)
-Answer.create(question: question6,
-              content: "Un dessin animé",
-              correct: false)
-Answer.create(question: question6,
-              content: "Un film fantastique",
-              correct: true)
-Answer.create(question: question6,
-              content: "Un film en noir et blanc",
-              correct: false)
-
-question7 = Question.create(content: "Combien de spectateurs sont venus au cinéma en 2017 ?", quiz: quiz)
-Answer.create(question: question7,
               content: "145 milions",
               correct: false)
-Answer.create(question: question7,
+Answer.create(question: question5,
               content: "195 milions",
               correct: false)
-Answer.create(question: question7,
+Answer.create(question: question5,
               content: "210 millions",
               correct: true)
 
-question8 = Question.create(content: "Pourquoi avez vous choisi ce cinéma ?", quiz: quiz)
-Answer.create(question: question8,
-              content: "Parce que c’est le plus proche de chez moi",
-              correct: true)
-Answer.create(question: question8,
-              content: "Parce que c’est le cinéma le moins cher",
-              correct: true)
-Answer.create(question: question8,
-              content: "Parce que mon film ne se donne qu’ici",
-              correct: true)
-
-question9 = Question.create(content: "Votre fauteuil est il confortable ?", quiz: quiz)
-Answer.create(question: question9,
+question6 = Question.create(content: "Votre fauteuil est il confortable ?", quiz: quiz)
+Answer.create(question: question6,
               content: "OUI",
               correct: true)
-Answer.create(question: question9,
+Answer.create(question: question6,
               content: "NON",
               correct: true)
 
-question10 = Question.create(content: "Trouvez vous ce cinéma propre et accueillant ?", quiz: quiz)
-Answer.create(question: question10,
+question7 = Question.create(content: "Trouvez vous ce cinéma propre et accueillant ?", quiz: quiz)
+Answer.create(question: question7,
               content: "Au poil",
               correct: true)
-Answer.create(question: question10,
+Answer.create(question: question7,
               content: "Peut mieux faire",
               correct: true)
-Answer.create(question: question10,
-              content: "Laisse sérieusement à désirer",
+Answer.create(question: question7,
+              content: "Laisse à désirer",
               correct: true)
 
 game = Game.create(player: player, quiz: quiz, score: 1600)

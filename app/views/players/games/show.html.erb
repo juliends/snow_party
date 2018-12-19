@@ -1,19 +1,15 @@
-<div class="container">
-  <div class="container mobile-container d-flex flex-column justify-content-center">
+<div class="container mobile-container d-flex flex-column justify-content-center">
+  <div class="container">
     <h5 class="text-center mb-5">
-      Dans « Astérix et Le secret de la Potion magique », qui fait la voix de Astérix ?
+      <%= Question.first.content %>
     </h5>
     <div class="row justify-content-center">
       <div class="col-10 col-sm-8 col-md-6 col-lg-4">
-        <button class="btn btn-info btn-lg btn-block my-2">
-          Guillaume Briat
-        </button>
-        <button class="btn btn-info btn-lg btn-block my-2">
-          Daniel Mesguich
-        </button>
-        <button class="btn btn-info btn-lg btn-block my-2">
-          Christian Clavier
-        </button>
+        <% Question.first.answers.each do |answer| %>
+          <button class="btn btn-info btn-lg btn-block my-3">
+            <%= answer.content %>
+          </button>
+        <% end %>
       </div>
     </div>
   </div>
