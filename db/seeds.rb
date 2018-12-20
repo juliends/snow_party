@@ -59,19 +59,20 @@ Answer.create(question: question2,
               content: "James Cameroun",
               correct: false)
 
-question3 = Question.create(content: "A quel personnage le dernier film de Rob Marshall fait-il référence ?",
-                            picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
-                            quiz: quiz,
-                            category: 'movie')
-Answer.create(question: question3,
-              content: "Cendrillon",
-              correct: false)
-Answer.create(question: question3,
-              content: "Mary Poppins",
-              correct: true)
-Answer.create(question: question3,
-              content: "Blanche Neige",
-              correct: false)
+# question3 = Question.create(content: "A quel personnage le dernier film de Rob Marshall fait-il référence ?",
+#                             picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
+#                             quiz: quiz,
+#                             category: 'movie')
+# Answer.create(question: question3,
+#               content: "Cendrillon",
+#               correct: false)
+# Answer.create(question: question3,
+#               content: "Mary Poppins",
+#               correct: true)
+# Answer.create(question: question3,
+#               content: "Blanche Neige",
+#               correct: false)
+
 
 # question4 = Question.create(content: "Dans quelle ville se déroule « Leto » ?",
 #                             picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
@@ -113,6 +114,17 @@ Answer.create(question: question5,
 # Answer.create(question: question7,
 #               content: "Laisse à désirer",
 #               correct: true)
+
+question3 = Question.create(content: "Quel est le meilleur festival de Montagne ?",
+                            picture: 'https://www.telegraph.co.uk/content/dam/Travel/ski/K2-mountain-Andrzej-Bargiel-first-ski-descent-by-Piotr-Pawlus-Red-Bull-Content-Pool.jpg?imwidth=300',
+                            quiz: quiz,
+                            category: 'confort')
+Answer.create(question: question3,
+              content: "Le festival des Arcs",
+              correct: true)
+Answer.create(question: question3,
+              content: "Le festival de l'Alpe d'Huez",
+              correct: false)
 
 # game1 = Game.create(player: player1, quiz: quiz, score: 1600)
 # game2 = Game.create(player: player2, quiz: quiz, score: 1400)
