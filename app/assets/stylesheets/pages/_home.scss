@@ -1,1 +1,9 @@
 // Specific CSS for your home-page
+.background-landing {
+  height: 100vh;
+  background: #1488CC;
+  // Chrome 10-25, Safari 5.1-6
+  background: -webkit-linear-gradient(to top, #2B32B2, #1488CC);
+  // W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
+  background: linear-gradient(to top, #2B32B2, #1488CC);
+}
