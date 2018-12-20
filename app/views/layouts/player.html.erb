@@ -32,6 +32,7 @@
     var winner_id = container.dataset.winnerId;
     var winner_name = container.dataset.winnerName;
     if (current_player_id === winner_id) {
+      container.classList.add('win');
       container.innerHTML = `
         <h1>Vous avez gagné</h1>
         <p>Bravo ${winner_name}, rejoignez-nous sur scène pour recevoir votre cadeau</p>

@@ -20,6 +20,7 @@ const displayMessage = () => {
   const winner_id = container.dataset.winnerId;
   const winner_name = container.dataset.winnerName;
   if (current_player_id === winner_id) {
+    container.classList.add('win');
     container.innerHTML = `
       <h1>Vous avez gagné</h1>
       <p>Bravo ${winner_name}, rejoignez-nous sur scène pour recevoir votre cadeau</p>
