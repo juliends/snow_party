@@ -2,10 +2,10 @@
   <div class="navbar mb-5">
     <div style="padding-top: 8px;">
       <%= link_to root_path do %>
-        <%= image_tag 'logo.png', height: 64 %>
+        <%= image_tag 'logo-white.png', class: 'logo' %>
       <% end %>
     </div>
-    <div class="pr-3" style="font-weight: 100;">
+    <div class="login pr-3">
       <%= link_to 'Login', new_user_session_path, class: 'text-light' %>
     </div>
   </div>
@@ -13,16 +13,16 @@
     <div class="d-flex flex-column align-items-center">
       <!-- <div class="col-6"> -->
         <%#= image_tag 'logo.png', height: 256, width: 256, class: 'mt-5 mb-4' %>
-        <h1 class="mb-3 pr-2" style="font-size: 64px;">
-          <em>CinePursuit</em>
+        <h1 class="font-weight-bold mb-3">
+          CinePursuit
         </h1>
-        <p class="mb-5 text-light" style="font-weight: 100;">Interagissez avec vos spectateurs, <strong>dans la salle de cinéma</strong></p>
+        <h4 class="mb-5 text-light" style="font-weight: 100;">Interagissez avec vos spectateurs, <strong>dans la salle de cinéma</strong></h4>
       <!-- </div> -->
     </div>
-    <div class="row justify-content-center">
-      <div class="col-10 col-lg-4">
-        <h6 class="mb-4 text-light">
-          Vous êtes interressé ?<br>Laissez-nous vous tenir au courant :
+    <div class="row justify-content-center pb-5">
+      <div class="col-10 col-sm-9 col-md-8 col-lg-5">
+        <h6 class="pb-3 text-light">
+          Vous êtes interressé ?<br>Laissez-nous vous tenir au courant
         </h6>
         <%= simple_form_for(Lead.new) do |f| %>
           <%= f.input :email, require: true,
