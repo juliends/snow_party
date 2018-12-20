@@ -1,9 +1,9 @@
 <div class="container mt-4">
-  <div class="row">
+  <div class="row mb-2">
     <div class="col-6">
       <h1>Quiz <%= @quiz.name %></h1>
     </div>
-    <div class="col-6 d-flex justify-content-around">
+    <div class="col-6 d-flex justify-content-around align-items-center">
       <p>
         <i class="fas fa-film"></i>
         Salle <%= @quiz.room %>
@@ -22,7 +22,7 @@
             <th scope="col">Email</th>
             <th scope="col">Nom</th>
             <th scope="col">Prénom</th>
-            <th scope="col">Numéro</th>
+            <th scope="col">Localisation</th>
             <th scope="col">Score</th>
             <th scope="col">Participations</th>
           </tr>
@@ -33,7 +33,7 @@
                 <td><%= player.email %></td>
                 <td><%= player.last_name || "Non renseigné"%></td>
                 <td><%= player.first_name || "Non renseigné"%></td>
-                <td><%= player.phone_number || "Non renseigné"%></td>
+                <td><%= player.location || "Non renseigné"%></td>
                 <td><%= player.games.find_by(quiz: @quiz).score %></td>
                 <td><%= player.games.count %></td>
               </tr>

@@ -2,7 +2,7 @@ class GameAnswer < ApplicationRecord
   belongs_to :game
   belongs_to :answer
 
-  after_commit :compute_score_in_game
+  after_create_commit :compute_score_in_game
 
   def compute_score
     total = answer.correct? ? 10 : 0
