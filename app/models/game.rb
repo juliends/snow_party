@@ -23,6 +23,11 @@ class Game < ApplicationRecord
     broadcast_results
   end
 
+  def confort?
+    answer = answers.includes(:question).find_by(questions: { category: 'confort' })
+    answer&.content == "OUI"
+  end
+
   def broadcast_results
     ActionCable.server.broadcast("quiz_results_#{quiz.id}", {
       message_partial: ApplicationController.renderer.render(

@@ -17,6 +17,15 @@ class Quiz < ApplicationRecord
     broadcast_live_player
   end
 
+  def good_confort_percentage
+    game_answers = GameAnswer.confort_for(self)
+    good_count = game_answers.count do |game_answer|
+      game_answer.answer.content == "OUI"
+    end
+    return 0 if game_answers.empty?
+    (good_count * 100) / game_answers.count
+  end
+
   private
 
   def broadcast_live_player
