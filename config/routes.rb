@@ -9,8 +9,9 @@ Rails.application.routes.draw do
   resources :leads, only: :create
 
   root to: 'pages#home'
-  resources :quizzes, only: [:index, :show] do
+  resources :quizzes, only: [:index, :show, :update] do
     get "qr"
+    get "close_quiz"
   end
   namespace :players do
     resources :quizzes, only: :show do

@@ -1,0 +1,13 @@
+div#end_game_screen {
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #a70808;
+
+  &.win {
+    background: #328a1f;
+  }
+}
