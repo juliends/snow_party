@@ -21,22 +21,6 @@ quiz = Quiz.create(
         playable: true
       )
 
-# quiz2 = Quiz.create(
-#         user: owner,
-#         name: "Avant 2ème",
-#         reward: "Exonération pour...",
-#         room: "4",
-#         playable: true
-#       )
-
-# quiz3 = Quiz.create(
-#         user: owner,
-#         name: "Avant 3ème",
-#         reward: "Exonération pour...",
-#         room: "1",
-#         playable: true
-#       )
-
 question1 = Question.create(content: "Etes vous confortablement installé dans votre fauteuil ?",
                             picture: '',
                             quiz: quiz,
@@ -62,7 +46,7 @@ Answer.create(question: question1,
 #               content: "210 millions",
 #               correct: true)
 
-question3 = Question.create(content: "Avec quel autre auteur Louis Garrel a-t-il co-écrit son 1er film: Les deux amis ?",
+question3 = Question.create(content: "Avec quel autre auteur Louis Garrel a-t-il co-écrit son 1er film: « Les deux amis » ?",
                             picture: 'http://fr.web.img4.acsta.net/c_215_290/pictures/15/07/10/15/26/039340.jpg',
                             quiz: quiz,
                             category: 'movie')
@@ -98,7 +82,7 @@ Answer.create(question: question5,
               content: "Festival des Arcs",
               correct: true)
 Answer.create(question: question5,
-              content: "Festival de l'Alpe d'Huez",
+              content: "Festival Alpe d'Huez",
               correct: false)
 
 # question1 = Question.create(content: "Dans « Astérix et Le secret de la Potion magique », qui fait la voix d'Astérix ?",

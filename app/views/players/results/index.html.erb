@@ -2,9 +2,13 @@
   <h3 class="text-center text-white pb-4">
     Résultats
   </h3>
-  <%= render 'results_table',
-    games: @games,
-    quiz: @quiz
-  %>
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-11 col-md-10 col-lg-7">
+    <%= render 'results_table',
+      games: @games,
+      quiz: @quiz
+    %>
+    </div>
+  </div>
 </div>
 <%= render 'shared/players_counter', quiz: @quiz %>

@@ -1,10 +1,14 @@
 <div class="container mobile-container d-flex flex-column justify-content-center">
   <div class="row justify-content-center">
     <div class="col-10 col-sm-8 col-md-6 col-lg-5 text-center">
+    <h1 class="mb-3">🏁</h1>
     <h1 class="text-light">Prêt à jouer ?</h1>
       <ul class="list-unstyled mt-5 mb-5">
         <li>
-          <p>Une place pour l'avant-première de <strong><%= @quiz.name %></strong> à gagner !</p>
+          <h6 class="mb-3">2 places de cinéma à gagner !</h6>
+        </li>
+        <li>
+          <p>Répondez rapidement pour augmenter vos chances</p>
         </li>
       </ul>
       <%= link_to "LANCER LE QUIZ", players_quiz_games_path(@quiz), method: :post, class: "btn btn-light btn-lg btn-block" %>
