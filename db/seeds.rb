@@ -95,10 +95,10 @@ question5 = Question.create(content: "Quel est le meilleur festival de Montagne 
                             quiz: quiz,
                             category: 'confort')
 Answer.create(question: question5,
-              content: "Le festival des Arcs",
+              content: "Festival des Arcs",
               correct: true)
 Answer.create(question: question5,
-              content: "Le festival de l'Alpe d'Huez",
+              content: "Festival de l'Alpe d'Huez",
               correct: false)
 
 # question1 = Question.create(content: "Dans « Astérix et Le secret de la Potion magique », qui fait la voix d'Astérix ?",
