@@ -32,7 +32,7 @@
           </tr>
         </thead>
         <tbody>
-          <% @quiz.players.each do |player| %>
+          <% @quiz.players.uniq.each do |player| %>
               <tr>
                 <td><%= player.email %></td>
                 <td class="font-weight-light">
