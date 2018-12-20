@@ -1,6 +1,6 @@
 class Players::GamesController < Players::BaseController
   def create
-    @quiz = Quiz.find(params[:quiz_id])
+    @quiz = Quiz.find_by(playable: true)
     @game = Game.new(quiz: @quiz, player: current_player)
     authorize [:player, @game]
     if @game.save
