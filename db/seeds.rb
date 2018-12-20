@@ -27,7 +27,21 @@ Answer.create(question: question1,
               content: "NON",
               correct: true)
 
-question3 = Question.create(content: 'Louis Garrel a co-écrit son 1er film "Les deux amis" avec:',
+# question2 = Question.create(content: "Quelle a été la fréquentation des salles 2017 ?",
+#                             picture: 'https://cdn-static.denofgeek.com/sites/denofgeek/files/2016/01/o-cinema-facebook.jpg',
+#                             quiz: quiz,
+#                             category: 'movie')
+# Answer.create(question: question2,
+#               content: "145 milions",
+#               correct: false)
+# Answer.create(question: question2,
+#               content: "195 milions",
+#               correct: false)
+# Answer.create(question: question2,
+#               content: "210 millions",
+#               correct: true)
+
+question3 = Question.create(content: 'Louis Garrel a co-écrit son 1er film « Les deux amis » avec:',
                             picture: 'http://fr.web.img4.acsta.net/c_215_290/pictures/15/07/10/15/26/039340.jpg',
                             quiz: quiz,
                             category: 'movie')
@@ -56,14 +70,14 @@ Answer.create(question: question4,
               correct: false)
 
 question5 = Question.create(content: "Quel est le meilleur festival de film sous la neige ?",
-                            picture: 'https://www.telegraph.co.uk/content/dam/Travel/ski/K2-mountain-Andrzej-Bargiel-first-ski-descent-by-Piotr-Pawlus-Red-Bull-Content-Pool.jpg?imwidth=300',
+                            picture: 'https://c402277.ssl.cf1.rackcdn.com/photos/2325/images/hero_small/mountains-hero.jpg?1345838509',
                             quiz: quiz,
                             category: 'movie')
 Answer.create(question: question5,
               content: "Festival des Arcs",
               correct: true)
 Answer.create(question: question5,
-              content: "Festival de l'Alpe d'Huez",
+              content: "Festival Alpe d'Huez",
               correct: false)
 
 puts "Seeded 🌱"
