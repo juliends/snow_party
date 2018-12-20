@@ -1,9 +1,35 @@
 // Specific CSS for your home-page
 .background-landing {
-  height: 100vh;
+  min-height: 100vh;
   background: #1488CC;
-  // Chrome 10-25, Safari 5.1-6
   background: -webkit-linear-gradient(to top, #2B32B2, #1488CC);
-  // W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
   background: linear-gradient(to top, #2B32B2, #1488CC);
+  .navbar {
+    @media (min-width: 576px) { margin-bottom: 10vh !important; }
+    .logo {
+      height: 50px;
+      @media (min-width: 576px) { height: 64px; }
+    }
+    .login {
+      font-weight: 100;
+      @media (max-width: 576px) { padding-right: 0 !important; }
+      a:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  h1 {
+    font-family: Helvetica;
+    font-size: 54px;
+    @media (min-width: 576px) { font-size: 80px; }
+    @media (min-width: 768px) { font-size: 90px; }
+    @media (min-width: 992px) { font-size: 100px; }
+  }
+  h4 {
+    @media (max-width: 576px) { font-size: 18px; }
+    @media (min-width: 576px) { margin-bottom: 9vh !important; }
+  }
+  h6 {
+    @media (max-width: 576px) { font-size: 14px; }
+  }
 }
