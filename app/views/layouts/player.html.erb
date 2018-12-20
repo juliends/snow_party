@@ -10,7 +10,7 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
     <%= javascript_pack_tag 'application' %>
   </head>
-  <body class="background-player">
+  <body class="background-player" id="player_screen" data-current-player-id="<%= current_player.id %>">
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'action_cable' %>
