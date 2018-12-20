@@ -1,27 +1,27 @@
-<div class="container mt-4">
+<div class="container mt-5 dashboard-show">
   <div class="row mb-2">
     <div class="col-6">
       <h1>Quiz <%= @quiz.name %></h1>
     </div>
     <div class="col-6 d-flex justify-content-around align-items-center">
-      <p>
+      <p class="mb-2">
         <i class="fas fa-film"></i>
         Salle <%= @quiz.room %>
       </p>
-      <p>
+      <p class="mb-2">
         <i class="far fa-user"></i>
-        <%= @quiz.games.count %> participant
+        <%= pluralize(@quiz.games.count, 'participant', 'participants') %>
       </p>
-      <p>
-        <i class="far fa-user"></i>
-        Confort: <%= @quiz.good_confort_percentage %> %
+      <p class="mb-2">
+        <i class="fas fa-couch"></i>
+        Confort: <%= @quiz.good_confort_percentage %>%
       </p>
     </div>
   </div>
-  <div class="row">
+  <div class="row dashboard">
     <div class="col-12">
-      <table class="table">
-        <thead class="thead-light">
+      <table class="table table-striped table-dashboard-show">
+        <thead class="thead-dark">
           <tr>
             <th scope="col">Email</th>
             <th scope="col">Nom</th>
@@ -35,15 +35,27 @@
           <% @quiz.players.each do |player| %>
               <tr>
                 <td><%= player.email %></td>
-                <td><%= player.last_name || "Non renseigné"%></td>
-                <td><%= player.first_name || "Non renseigné"%></td>
-                <td><%= player.location || "Non renseigné"%></td>
-                <td><%= display_player_confort(player.games.find_by(quiz: @quiz)) %></td>
-                <td><%= player.games.find_by(quiz: @quiz).score %></td>
+                <td class="font-weight-light">
+                  <%= player.last_name || "Non renseigné" %>
+                </td>
+                <td class="font-weight-light">
+                  <%= player.first_name || "Non renseigné" %>
+                </td>
+                <td class="font-weight-light">
+                  <%= player.location || "N/A" %>
+                </td>
+                <td>
+                  <%= display_player_confort(player.games.find_by(quiz: @quiz)) == 'Oui' ? "<i class='fas fa-check'></i>".html_safe : "<i class='fas fa-times'></i>".html_safe %>
+                </td>
+                <td class="font-weight-bold">
+                  <%= player.games.find_by(quiz: @quiz).score %>
+                </td>
               </tr>
           <% end %>
         </tbody>
       </table>
+      <%= link_to 'Revenir aux quizzes', quizzes_path %>
     </div>
   </div>
 </div>
+
