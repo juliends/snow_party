@@ -41,10 +41,7 @@ Answer.create(question: question1,
 #               content: "210 millions",
 #               correct: true)
 
-question3 = Question.create(content: "Avec quel autre auteur Louis Garrel a-t-il co-écrit son 1er film: « Les deux amis » ?",
-=======
-question3 = Question.create(content: 'Louis Garrel a co-écrit son 1er film "Les deux amis" avec:',
->>>>>>> b525ed9ed44eab79de02f14f56e7b0fb1a7bf207
+question3 = Question.create(content: 'Louis Garrel a co-écrit son 1er film « Les deux amis » avec:',
                             picture: 'http://fr.web.img4.acsta.net/c_215_290/pictures/15/07/10/15/26/039340.jpg',
                             quiz: quiz,
                             category: 'movie')
