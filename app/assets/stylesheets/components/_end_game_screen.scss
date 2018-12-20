@@ -5,9 +5,49 @@ div#end_game_screen {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #a70808;
+  background: #1488CC;
+  background: -webkit-linear-gradient(to top, #2B32B2, #1488CC);
+  background: linear-gradient(to top, #2B32B2, #1488CC);
 
   &.win {
-    background: #328a1f;
+    background: #52c234;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #0f760f, #52c234);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #0f760f, #52c234); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  p.emoji {
+    font-size: 4em;
+    margin-bottom: 0;
+  }
+
+  h1, p.content {
+    width: 80%;
+    text-align: center;
+  }
+
+  .no-phone {
+    background: white;
+    color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    padding: 16px;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.20);
+    margin-top: 40px;
+    max-width: 90%;
+
+    .icon {
+      font-size: 3em;
+      margin-right: 8px;
+    }
+
+    .message {
+      text-align: center;
+
+      strong {
+        font-size: 1.2em;
+      }
+    }
   }
 }
