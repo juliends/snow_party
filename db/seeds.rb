@@ -70,7 +70,7 @@ Answer.create(question: question4,
               correct: false)
 
 question5 = Question.create(content: "Quel est le meilleur festival de film sous la neige ?",
-                            picture: 'https://www.telegraph.co.uk/content/dam/Travel/ski/K2-mountain-Andrzej-Bargiel-first-ski-descent-by-Piotr-Pawlus-Red-Bull-Content-Pool.jpg?imwidth=300',
+                            picture: 'https://c402277.ssl.cf1.rackcdn.com/photos/2325/images/hero_small/mountains-hero.jpg?1345838509',
                             quiz: quiz,
                             category: 'movie')
 Answer.create(question: question5,
