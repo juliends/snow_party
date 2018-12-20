@@ -11,4 +11,4 @@
     </div>
   </div>
 </div>
-<%= render 'shared/players_counter', quiz: Quiz.find(params[:id]) %>
+<%= render 'shared/players_counter', quiz: Quiz.find_by(playable: true) %>

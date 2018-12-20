@@ -9,7 +9,7 @@ class QuizzesController < ApplicationController
   end
 
   def show
-    @quiz = Quiz.find(params[:id])
+    @quiz = Quiz.find_by(playable: true)
     authorize @quiz
   end
 
