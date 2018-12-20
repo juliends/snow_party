@@ -8,11 +8,13 @@
     @media (min-width: 576px) { margin-bottom: 10vh !important; }
     .logo {
       height: 50px;
-      @media (min-width: 576px) { height: 64px; }
+      border-radius: 50%;
+      box-shadow: 0 6px 20px 0 rgba(0,0,0,.18);
+      // @media (min-width: 576px) { height: 64px; }
     }
     .login {
       font-weight: 100;
-      @media (max-width: 576px) { padding-right: 0 !important; }
+      @media (max-width: 576px) { padding-right: 2px !important; }
       a:hover {
         text-decoration: none;
       }
