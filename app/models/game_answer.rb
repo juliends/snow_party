@@ -4,6 +4,8 @@ class GameAnswer < ApplicationRecord
 
   after_create_commit :compute_score_in_game
 
+  scope :confort_for, ->(quiz) { includes(:game, answer: :question).where(questions: { category: 'confort' }).where(games: { quiz_id: quiz.id }) }
+
   def compute_score
     total = answer.correct? ? 10 : 0
     case time_to_answer
