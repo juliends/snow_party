@@ -2,7 +2,8 @@
   class="container mobile-container d-flex flex-column justify-content-center"
   data-controller="answers"
 >
-  <h5 class="text-center text-light mb-5">
+  <div class="ml-auto mr-auto mb-4 quiz-img" style="background-image: url('<%= image_path @question.picture %>')"></div>
+  <h5 class="text-center text-light mb-4">
     <%= @question.content %>
   </h5>
   <div class="row justify-content-center">

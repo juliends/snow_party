@@ -21,7 +21,9 @@ quiz = Quiz.create(
         playable: true
       )
 
-question1 = Question.create(content: "Dans « Astérix et Le secret de la Potion magique », qui fait la voix d'Astérix ?", quiz: quiz)
+question1 = Question.create(content: "Dans « Astérix et Le secret de la Potion magique », qui fait la voix d'Astérix ?",
+                            picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
+                            quiz: quiz)
 Answer.create(question: question1,
               content: "Guillaume Briat",
               correct: false)
@@ -32,7 +34,9 @@ Answer.create(question: question1,
               content: "Christian Clavier",
               correct: true)
 
-question2 = Question.create(content: "Qui a réalisé Wildlife?", quiz: quiz)
+question2 = Question.create(content: "Qui a réalisé Wildlife?",
+                            picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
+                            quiz: quiz)
 Answer.create(question: question2,
               content: "Paul Dano",
               correct: true)
@@ -43,7 +47,9 @@ Answer.create(question: question2,
               content: "James Cameroun",
               correct: false)
 
-question3 = Question.create(content: "A quel personnage le dernier film de Rob Marshall fait-il référence ?", quiz: quiz)
+question3 = Question.create(content: "A quel personnage le dernier film de Rob Marshall fait-il référence ?",
+                            picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
+                            quiz: quiz)
 Answer.create(question: question3,
               content: "Cendrillon",
               correct: false)
@@ -54,7 +60,9 @@ Answer.create(question: question3,
               content: "Blanche Neige",
               correct: false)
 
-question4 = Question.create(content: "Dans quelle ville se déroule « Leto » ?", quiz: quiz)
+question4 = Question.create(content: "Dans quelle ville se déroule « Leto » ?",
+                            picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
+                            quiz: quiz)
 Answer.create(question: question4,
               content: "Leningrad",
               correct: true)
@@ -65,7 +73,9 @@ Answer.create(question: question4,
               content: "Stalingrad",
               correct: false)
 
-question5 = Question.create(content: "Combien de spectateurs sont venus au cinéma en 2017 ?", quiz: quiz)
+question5 = Question.create(content: "Combien de spectateurs sont venus au cinéma en 2017 ?",
+                            picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
+                            quiz: quiz)
 Answer.create(question: question5,
               content: "145 milions",
               correct: false)
@@ -76,7 +86,9 @@ Answer.create(question: question5,
               content: "210 millions",
               correct: true)
 
-question6 = Question.create(content: "Votre fauteuil est-il confortable ?", quiz: quiz)
+question6 = Question.create(content: "Votre fauteuil est-il confortable ?",
+                            picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
+                            quiz: quiz)
 Answer.create(question: question6,
               content: "OUI",
               correct: true)
@@ -84,7 +96,9 @@ Answer.create(question: question6,
               content: "NON",
               correct: true)
 
-question7 = Question.create(content: "Trouvez-vous ce cinéma propre et accueillant ?", quiz: quiz)
+question7 = Question.create(content: "Trouvez-vous ce cinéma propre et accueillant ?",
+                            picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
+                            quiz: quiz)
 Answer.create(question: question7,
               content: "Parfait",
               correct: true)
