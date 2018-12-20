@@ -7,11 +7,11 @@ User.destroy_all
 Player.destroy_all
 
 owner = User.create(email: "dim@gmail.com", password: "lewagon")
-player1 = Player.create(email: "george@abitbol.com")
-player2 = Player.create(email: "monica@belucci.it")
-player3 = Player.create(email: "jean@dujardin.fr")
-player4 = Player.create(email: "quentin@dupieux.fr")
-player5 = Player.create(email: "eric@judor.fr")
+# player1 = Player.create(email: "george@abitbol.com")
+# player2 = Player.create(email: "monica@belucci.it")
+# player3 = Player.create(email: "jean@dujardin.fr")
+# player4 = Player.create(email: "quentin@dupieux.fr")
+# player5 = Player.create(email: "eric@judor.fr")
 
 quiz = Quiz.create(
         user: owner,
@@ -114,11 +114,11 @@ Answer.create(question: question5,
 #               content: "Laisse à désirer",
 #               correct: true)
 
-game1 = Game.create(player: player1, quiz: quiz, score: 1600)
-game2 = Game.create(player: player2, quiz: quiz, score: 1400)
-game3 = Game.create(player: player3, quiz: quiz, score: 1300)
-game4 = Game.create(player: player4, quiz: quiz, score: 1200)
-game5 = Game.create(player: player5, quiz: quiz, score: 1100)
+# game1 = Game.create(player: player1, quiz: quiz, score: 1600)
+# game2 = Game.create(player: player2, quiz: quiz, score: 1400)
+# game3 = Game.create(player: player3, quiz: quiz, score: 1300)
+# game4 = Game.create(player: player4, quiz: quiz, score: 1200)
+# game5 = Game.create(player: player5, quiz: quiz, score: 1100)
 
 quiz.questions.each do |question|
   GameAnswer.create(
