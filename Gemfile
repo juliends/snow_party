@@ -18,6 +18,8 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'rqrcode'
+gem 'clearbit'
+
 
 gem 'sidekiq'
 gem 'sidekiq-failures', '~> 1.0'
