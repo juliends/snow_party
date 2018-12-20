@@ -9,7 +9,7 @@
   </thead>
   <tbody>
     <% games.each_with_index do |game, index| %>
-      <tr class="<%= 'leader' if index == 0 %><%= ' me' if game.player.id == player_id %>">
+      <tr class="<%= 'leader' if index == 0 %>" data-player-id="<%= game.player.id %>">
         <th scope="row" class="text-white"><%= index + 1 %></th>
         <td><i class="fas fa-trophy"></i></td>
         <td><%= game.player.email.split('@')[0].capitalize %></td>
@@ -18,3 +18,13 @@
     <% end %>
   </tbody>
 </table>
+
+<script>
+  var current_player_id = document.getElementById('results-page').dataset.currentPlayerId;
+  var players = document.querySelectorAll('#quiz_results tbody tr');
+  players.forEach(function(player) {
+    if (current_player_id === player.dataset.playerId) {
+      player.classList.add('me');
+    }
+  })
+</script>

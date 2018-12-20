@@ -7,10 +7,21 @@ const initResultsTable = () => {
       {
         received: (data) => {
           document.getElementById('quiz_results').outerHTML = data.message_partial;
+          highlightCurrentPlayer();
         }
       }
     );
   }
+}
+
+const highlightCurrentPlayer = () => {
+  const current_player_id = document.getElementById('results-page').dataset.currentPlayerId;
+  const players = document.querySelectorAll('#quiz_results tbody tr');
+  players.forEach(player => {
+    if (current_player_id === player.dataset.playerId) {
+      player.classList.add('me');
+    }
+  })
 }
 
 export default initResultsTable;
