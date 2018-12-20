@@ -21,4 +21,9 @@ Rails.application.routes.draw do
       resources :results, only: :index
     end
   end
+
+  require "sidekiq/web"
+  authenticate :user, lambda { |u| u.admin } do
+    mount Sidekiq::Web => '/sidekiq'
+  end
 end
