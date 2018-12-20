@@ -6,7 +6,7 @@ Quiz.destroy_all
 User.destroy_all
 Player.destroy_all
 
-owner = User.create(email: "dim@gmail.com", password: "lewagon")
+owner = User.create(email: "dimitri@lewagon.org", password: "lewagon")
 # player1 = Player.create(email: "george@abitbol.com")
 # player2 = Player.create(email: "monica@belucci.it")
 # player3 = Player.create(email: "jean@dujardin.fr")
@@ -120,13 +120,13 @@ Answer.create(question: question5,
 # game4 = Game.create(player: player4, quiz: quiz, score: 1200)
 # game5 = Game.create(player: player5, quiz: quiz, score: 1100)
 
-quiz.questions.each do |question|
-  GameAnswer.create(
-    game: game1,
-    answer: question.answers.sample,
-    start_at: Time.zone.now,
-    ends_at: Time.zone.now + (4..9).to_a.sample
-  )
-end
+# quiz.questions.each do |question|
+#   GameAnswer.create(
+#     game: game1,
+#     answer: question.answers.sample,
+#     start_at: Time.zone.now,
+#     ends_at: Time.zone.now + (4..9).to_a.sample
+#   )
+# end
 
 puts "Seeded 🌱"

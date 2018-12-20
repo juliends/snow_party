@@ -22,6 +22,7 @@ class Quiz < ApplicationRecord
     good_count = game_answers.count do |game_answer|
       game_answer.answer.content == "OUI"
     end
+    return 0 if game_answers.empty?
     (good_count * 100) / game_answers.count
   end
 
