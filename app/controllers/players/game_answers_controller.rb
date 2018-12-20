@@ -4,9 +4,9 @@ class Players::GameAnswersController < Players::BaseController
   def create
     @game_answer = GameAnswer.new(game_answer_params)
     @game_answer.game = @game
+    @game_answer.ends_at = Time.zone.now
     authorize [:player, @game_answer]
     if @game_answer.save
-      # sleep(1)
       redirect_to players_game_path @game
     else
       @question = @game_answer.answer.question
@@ -17,7 +17,7 @@ class Players::GameAnswersController < Players::BaseController
   private
 
   def game_answer_params
-    params.require(:game_answer).permit(:answer_id)
+    params.require(:game_answer).permit(:answer_id, :start_at)
   end
 
   def set_game
