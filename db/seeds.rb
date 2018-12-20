@@ -49,7 +49,7 @@ Answer.create(question: question1,
               correct: true)
 
 question2 = Question.create(content: "Quelle a été la fréquentation des salles 2017 ?",
-                            picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
+                            picture: 'https://cdn-static.denofgeek.com/sites/denofgeek/files/2016/01/o-cinema-facebook.jpg',
                             quiz: quiz,
                             category: 'movie')
 Answer.create(question: question2,
