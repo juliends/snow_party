@@ -23,8 +23,8 @@
             <th scope="col">Nom</th>
             <th scope="col">Prénom</th>
             <th scope="col">Localisation</th>
+            <th scope="col">Confort</th>
             <th scope="col">Score</th>
-            <th scope="col">Participations</th>
           </tr>
         </thead>
         <tbody>
@@ -34,8 +34,8 @@
                 <td><%= player.last_name || "Non renseigné"%></td>
                 <td><%= player.first_name || "Non renseigné"%></td>
                 <td><%= player.location || "Non renseigné"%></td>
+                <td><%= display_player_confort(player.games.find_by(quiz: @quiz)) %></td>
                 <td><%= player.games.find_by(quiz: @quiz).score %></td>
-                <td><%= player.games.count %></td>
               </tr>
           <% end %>
         </tbody>

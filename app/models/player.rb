@@ -5,6 +5,7 @@ class Player < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :games
+  has_many :game_answers, through: :games
   has_many :quizzes, through: :games
 
   after_create_commit :enrich_player
