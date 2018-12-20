@@ -11,7 +11,7 @@ owner = User.create(email: "dimitri@lewagon.org", password: "lewagon")
 quiz = Quiz.create(
         user: owner,
         name: "L'Homme Fidèle",
-        reward: "2x places de cinéma",
+        reward: "2 places de cinéma",
         room: "3",
         playable: true
       )
