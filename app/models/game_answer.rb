@@ -7,16 +7,13 @@ class GameAnswer < ApplicationRecord
   scope :confort_for, ->(quiz) { includes(:game, answer: :question).where(questions: { category: 'confort' }).where(games: { quiz_id: quiz.id }) }
 
   def compute_score
-    total = answer.correct? ? 10 : 0
-    case time_to_answer
-    when 0.0...3.0
-      total += 10
-    when 3.0...5.0
-      total += 5
-    when 5.0...7.0
-      total += 2
+    if answer.correct?
+      total = 30
+      bonus = (10 - time_to_answer.to_i) * 10
+      total += bonus if bonus.positive?
+      return total
     end
-    total
+    0
   end
 
   private
