@@ -21,6 +21,22 @@ quiz = Quiz.create(
         playable: true
       )
 
+# quiz2 = Quiz.create(
+#         user: owner,
+#         name: "Avant 2ème",
+#         reward: "Exonération pour...",
+#         room: "4",
+#         playable: true
+#       )
+
+# quiz3 = Quiz.create(
+#         user: owner,
+#         name: "Avant 3ème",
+#         reward: "Exonération pour...",
+#         room: "1",
+#         playable: true
+#       )
+
 question6 = Question.create(content: "Etes vous confortablement installé dans votre fauteuil ?",
                             picture: '',
                             quiz: quiz,

@@ -1,0 +1,46 @@
+body {
+  background-color: $light;
+}
+
+.dashboard {
+  .thead-dark tr th {
+    background-color: #1488CC;
+    border-color: #1488CC;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.table-dashboard-index {
+  tr {
+    &:hover {
+      background-color: #F2F2F2 !important;
+    }
+    td {
+      padding: 0;
+      a {
+        color: $dark;
+        display: block;
+        height: 100%;
+        width: 100%;
+        padding: 12px;
+        &:hover {
+          color: $dark;
+        }
+      }
+    }
+  }
+}
+
+.dashboard-show {
+  i {
+    color: #1488CC;
+  }
+  .fa-check {
+    color: $success;
+  }
+  .fa-times {
+    color: $danger;
+  }
+}
