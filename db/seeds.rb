@@ -6,7 +6,7 @@ Quiz.destroy_all
 User.destroy_all
 Player.destroy_all
 
-owner = User.create(email: "test@test.com", password: "123123")
+owner = User.create(email: "dim@gmail.com", password: "lewagon")
 player1 = Player.create(email: "george@abitbol.com")
 player2 = Player.create(email: "monica@belucci.it")
 player3 = Player.create(email: "jean@dujardin.fr")
@@ -15,24 +15,34 @@ player5 = Player.create(email: "eric@judor.fr")
 
 quiz = Quiz.create(
         user: owner,
-        name: "Super Burger Quiz",
-        reward: "1 place gratuite",
+        name: "Avant 1ère",
+        reward: "Exonération pour...",
         room: "3",
         playable: true
       )
 
-question1 = Question.create(content: "Dans « Astérix et Le secret de la Potion magique », qui fait la voix d'Astérix ?",
-                            picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
+question6 = Question.create(content: "Etes vous confortablement installé dans votre fauteuil ?",
+                            picture: '',
                             quiz: quiz)
-Answer.create(question: question1,
-              content: "Guillaume Briat",
-              correct: false)
-Answer.create(question: question1,
-              content: "Daniel Mesguich",
-              correct: false)
-Answer.create(question: question1,
-              content: "Christian Clavier",
+Answer.create(question: question6,
+              content: "OUI",
               correct: true)
+Answer.create(question: question6,
+              content: "NON",
+              correct: true)
+
+# question1 = Question.create(content: "Dans « Astérix et Le secret de la Potion magique », qui fait la voix d'Astérix ?",
+#                             picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
+#                             quiz: quiz)
+# Answer.create(question: question1,
+#               content: "Guillaume Briat",
+#               correct: false)
+# Answer.create(question: question1,
+#               content: "Daniel Mesguich",
+#               correct: false)
+# Answer.create(question: question1,
+#               content: "Christian Clavier",
+#               correct: true)
 
 question2 = Question.create(content: "Qui a réalisé Wildlife?",
                             picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
@@ -60,18 +70,18 @@ Answer.create(question: question3,
               content: "Blanche Neige",
               correct: false)
 
-question4 = Question.create(content: "Dans quelle ville se déroule « Leto » ?",
-                            picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
-                            quiz: quiz)
-Answer.create(question: question4,
-              content: "Leningrad",
-              correct: true)
-Answer.create(question: question4,
-              content: "Saint Petersburg",
-              correct: true)
-Answer.create(question: question4,
-              content: "Stalingrad",
-              correct: false)
+# question4 = Question.create(content: "Dans quelle ville se déroule « Leto » ?",
+#                             picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
+#                             quiz: quiz)
+# Answer.create(question: question4,
+#               content: "Leningrad",
+#               correct: true)
+# Answer.create(question: question4,
+#               content: "Saint Petersburg",
+#               correct: true)
+# Answer.create(question: question4,
+#               content: "Stalingrad",
+#               correct: false)
 
 question5 = Question.create(content: "Combien de spectateurs sont venus au cinéma en 2017 ?",
                             picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
@@ -86,15 +96,6 @@ Answer.create(question: question5,
               content: "210 millions",
               correct: true)
 
-question6 = Question.create(content: "Votre fauteuil est-il confortable ?",
-                            picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
-                            quiz: quiz)
-Answer.create(question: question6,
-              content: "OUI",
-              correct: true)
-Answer.create(question: question6,
-              content: "NON",
-              correct: true)
 
 question7 = Question.create(content: "Trouvez-vous ce cinéma propre et accueillant ?",
                             picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
