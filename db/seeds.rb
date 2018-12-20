@@ -6,7 +6,7 @@ Quiz.destroy_all
 User.destroy_all
 Player.destroy_all
 
-owner = User.create(email: "dim@gmail.com", password: "123123")
+owner = User.create(email: "dim@gmail.com", password: "lewagon")
 player1 = Player.create(email: "george@abitbol.com")
 player2 = Player.create(email: "monica@belucci.it")
 player3 = Player.create(email: "jean@dujardin.fr")
