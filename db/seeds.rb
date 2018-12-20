@@ -37,53 +37,67 @@ quiz = Quiz.create(
 #         playable: true
 #       )
 
-question6 = Question.create(content: "Etes vous confortablement installé dans votre fauteuil ?",
+question1 = Question.create(content: "Etes vous confortablement installé dans votre fauteuil ?",
                             picture: '',
                             quiz: quiz,
                             category: 'confort')
-Answer.create(question: question6,
+Answer.create(question: question1,
               content: "OUI",
               correct: true)
-Answer.create(question: question6,
+Answer.create(question: question1,
               content: "NON",
               correct: true)
 
-question5 = Question.create(content: "Quelle a été la fréquentation des salles 2017 ?",
+question2 = Question.create(content: "Quelle a été la fréquentation des salles 2017 ?",
                             picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
                             quiz: quiz,
                             category: 'movie')
-Answer.create(question: question5,
+Answer.create(question: question2,
               content: "145 milions",
               correct: false)
-Answer.create(question: question5,
+Answer.create(question: question2,
               content: "195 milions",
               correct: false)
-Answer.create(question: question5,
+Answer.create(question: question2,
               content: "210 millions",
               correct: true)
 
-question2 = Question.create(content: "Avec quel réalisateur Louis Garrel a-t-il tourné ?",
+question3 = Question.create(content: "Avec quel autre auteur Louis Garrel a-t-il co-écrit son 1er film: Les deux amis ?",
+                            picture: 'http://fr.web.img4.acsta.net/c_215_290/pictures/15/07/10/15/26/039340.jpg',
+                            quiz: quiz,
+                            category: 'movie')
+Answer.create(question: question3,
+              content: "Arnaud Desplechin",
+              correct: false)
+Answer.create(question: question3,
+              content: "Christophe Honoré",
+              correct: true)
+Answer.create(question: question3,
+              content: "Philippe Garrel",
+              correct: false)
+
+question4 = Question.create(content: "Avec quel réalisateur Louis Garrel a-t-il tourné ?",
                             picture: 'https://vz.cnwimg.com/thumbc-300x300/wp-content/uploads/2014/09/Louis-Garrel1.jpg',
                             quiz: quiz,
                             category: 'movie')
-Answer.create(question: question2,
+Answer.create(question: question4,
               content: "Steven Spielberg",
               correct: false)
-Answer.create(question: question2,
+Answer.create(question: question4,
               content: "Bernardo Bertolucci",
               correct: true)
-Answer.create(question: question2,
+Answer.create(question: question4,
               content: "Fabien Onteniente",
               correct: false)
 
-question3 = Question.create(content: "Quel est le meilleur festival de Montagne ?",
+question5 = Question.create(content: "Quel est le meilleur festival de Montagne ?",
                             picture: 'https://www.telegraph.co.uk/content/dam/Travel/ski/K2-mountain-Andrzej-Bargiel-first-ski-descent-by-Piotr-Pawlus-Red-Bull-Content-Pool.jpg?imwidth=300',
                             quiz: quiz,
                             category: 'confort')
-Answer.create(question: question3,
+Answer.create(question: question5,
               content: "Le festival des Arcs",
               correct: true)
-Answer.create(question: question3,
+Answer.create(question: question5,
               content: "Le festival de l'Alpe d'Huez",
               correct: false)
 
