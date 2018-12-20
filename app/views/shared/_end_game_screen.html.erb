@@ -1,9 +1,6 @@
-<div id="end_game_screen" class="<%= 'win' if winner_id == current_player_id %>">
-  <% if winner_id == current_player_id %>
-    <h1>Vous avez gagné</h1>
-    <p>Rejoignez-nous sur scène pour avoir votre cadeau</p>
-  <% else %>
-    <h1>Vous avez perdu</h1>
-    <p>...</p>
-  <% end %>
+<div
+  id="end_game_screen"
+  data-winner-id="<%= winner_id %>"
+  data-winner-name="<%= winner_name %>"
+>
 </div>

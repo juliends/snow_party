@@ -8,4 +8,12 @@ class QuizPolicy < ApplicationPolicy
   def show?
     record.user == user
   end
+
+  def update?
+    show?
+  end
+
+  def close_quiz?
+    show?
+  end
 end
