@@ -15,8 +15,8 @@ owner = User.create(email: "dimitri@lewagon.org", password: "lewagon")
 
 quiz = Quiz.create(
         user: owner,
-        name: "Avant 1ère",
-        reward: "Exonération pour...",
+        name: "AVP L'homme fidèle",
+        reward: "Exonération pour prochain film AD VITAM",
         room: "3",
         playable: true
       )
@@ -32,6 +32,45 @@ Answer.create(question: question6,
               content: "NON",
               correct: true)
 
+question5 = Question.create(content: "Quelle a été la fréquentation des salles 2017 ?",
+                            picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
+                            quiz: quiz,
+                            category: 'movie')
+Answer.create(question: question5,
+              content: "145 milions",
+              correct: false)
+Answer.create(question: question5,
+              content: "195 milions",
+              correct: false)
+Answer.create(question: question5,
+              content: "210 millions",
+              correct: true)
+
+question2 = Question.create(content: "Avec quel réalisateur Louis Garrel a-t-il tourné ?",
+                            picture: 'https://vz.cnwimg.com/thumbc-300x300/wp-content/uploads/2014/09/Louis-Garrel1.jpg',
+                            quiz: quiz,
+                            category: 'movie')
+Answer.create(question: question2,
+              content: "Steven Spielberg",
+              correct: false)
+Answer.create(question: question2,
+              content: "Bernardo Bertolucci",
+              correct: true)
+Answer.create(question: question2,
+              content: "Fabien Onteniente",
+              correct: false)
+
+question3 = Question.create(content: "Quel est le meilleur festival de Montagne ?",
+                            picture: 'https://www.telegraph.co.uk/content/dam/Travel/ski/K2-mountain-Andrzej-Bargiel-first-ski-descent-by-Piotr-Pawlus-Red-Bull-Content-Pool.jpg?imwidth=300',
+                            quiz: quiz,
+                            category: 'confort')
+Answer.create(question: question3,
+              content: "Le festival des Arcs",
+              correct: true)
+Answer.create(question: question3,
+              content: "Le festival de l'Alpe d'Huez",
+              correct: false)
+
 # question1 = Question.create(content: "Dans « Astérix et Le secret de la Potion magique », qui fait la voix d'Astérix ?",
 #                             picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
 #                             quiz: quiz)
@@ -44,20 +83,6 @@ Answer.create(question: question6,
 # Answer.create(question: question1,
 #               content: "Christian Clavier",
 #               correct: true)
-
-question2 = Question.create(content: "Qui a réalisé Wildlife?",
-                            picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
-                            quiz: quiz,
-                            category: 'movie')
-Answer.create(question: question2,
-              content: "Paul Dano",
-              correct: true)
-Answer.create(question: question2,
-              content: "Paul Auster",
-              correct: false)
-Answer.create(question: question2,
-              content: "James Cameroun",
-              correct: false)
 
 # question3 = Question.create(content: "A quel personnage le dernier film de Rob Marshall fait-il référence ?",
 #                             picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
@@ -87,21 +112,6 @@ Answer.create(question: question2,
 #               content: "Stalingrad",
 #               correct: false)
 
-question5 = Question.create(content: "Combien de spectateurs sont venus au cinéma en 2017 ?",
-                            picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
-                            quiz: quiz,
-                            category: 'movie')
-Answer.create(question: question5,
-              content: "145 milions",
-              correct: false)
-Answer.create(question: question5,
-              content: "195 milions",
-              correct: false)
-Answer.create(question: question5,
-              content: "210 millions",
-              correct: true)
-
-
 # question7 = Question.create(content: "Trouvez-vous ce cinéma propre et accueillant ?",
 #                             picture: 'https://www.asterix.com/wp-content/uploads/2018/04/secret-potion-magique-3b-400x400.png',
 #                             quiz: quiz)
@@ -114,17 +124,6 @@ Answer.create(question: question5,
 # Answer.create(question: question7,
 #               content: "Laisse à désirer",
 #               correct: true)
-
-question3 = Question.create(content: "Quel est le meilleur festival de Montagne ?",
-                            picture: 'https://www.telegraph.co.uk/content/dam/Travel/ski/K2-mountain-Andrzej-Bargiel-first-ski-descent-by-Piotr-Pawlus-Red-Bull-Content-Pool.jpg?imwidth=300',
-                            quiz: quiz,
-                            category: 'confort')
-Answer.create(question: question3,
-              content: "Le festival des Arcs",
-              correct: true)
-Answer.create(question: question3,
-              content: "Le festival de l'Alpe d'Huez",
-              correct: false)
 
 # game1 = Game.create(player: player1, quiz: quiz, score: 1600)
 # game2 = Game.create(player: player2, quiz: quiz, score: 1400)
