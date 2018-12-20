@@ -9,20 +9,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 512px;
+    width: 500px;
     height: 512px;
     background-color: white;
     border-radius: 5%;
   }
   .qr-instructions {
-    width: 366px;
+    // flex: 0 0 50%;
+    width: 500px;
     border-radius: 5%;
     .qr-instructions-img {
       border-radius: 10%;
       height: 192px;
     }
   }
-  // fallback for old browsers
+
+}
+.main {
+    // fallback for old browsers
   background: #141E30;
   // Chrome 10-25, Safari 5.1-6
   background: -webkit-linear-gradient(to top, #243B55, #141E30);
