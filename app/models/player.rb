@@ -9,6 +9,7 @@ class Player < ApplicationRecord
   has_many :quizzes, through: :games
 
   after_create_commit :enrich_player
+  after_create_commit :crate_lead
 
   def username
     email.split('@').first
@@ -22,5 +23,9 @@ class Player < ApplicationRecord
 
   def enrich_player
     EnrichPlayerWorker.perform_async(id)
+  end
+
+  def crate_lead
+    Lead.create(email: self.email)
   end
 end
