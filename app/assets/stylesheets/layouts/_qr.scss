@@ -3,6 +3,12 @@
   font-size: 4rem;
   font-family: futura;
 }
+
+.pursuit-title-mobile {
+  font-weight: 100;
+  font-size: 3rem;
+  font-family: futura;
+}
 #qr_code {
   // background-color: black;
   // svg rect {
@@ -29,6 +35,15 @@
     }
   }
 
+}
+.qr_square-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 5%;
 }
 .main {
     // fallback for old browsers

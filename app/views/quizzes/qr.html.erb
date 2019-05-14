@@ -1,4 +1,4 @@
-<div class="main">
+<div class="main d-none d-md-block">
   <div class="d-flex justify-content-center">
     <h1 class="text-white mt-5 mb-4 pursuit-title">CinePursuit</h1>
   </div>
@@ -13,6 +13,28 @@
     </div>
     <div class="qr_square">
       <%= @qr_code.as_svg.html_safe %>
+    </div>
+  </div>
+</div>
+
+<div class="main d-block d-sm-none">
+  <div class="container">
+    <h3 class="text-white pt-4 mb-4 pursuit-title-mobile text-center">CinePursuit</h3>
+    <p class="text-white mb-0 text-center">
+      Prêt à challenger les autres spectateurs de la salle ? <br><br>
+    </p>
+    <p class="text-white mb-2">A gagner : <%= @quiz.reward %> 😎</p>
+    <p class="text-white mb-3">Scannez ce <code>QR-Code</code> pour jouer</p>
+    <div class="d-flex justify-content-center">
+      <div class="qr_square-mobile">
+        <%= @qr_code.as_svg(module_size: 2).html_safe %>
+      </div>
+    </div>
+    <div class="mt-5">
+      <%= link_to root_path do %>
+        <i class="fas fa-backward"></i>
+        Retour
+      <% end %>
     </div>
   </div>
 </div>
