@@ -22,6 +22,7 @@ class QuizzesController < ApplicationController
   def qr
     @no_nav = true
     @qr_code = RQRCode::QRCode.new(new_player_registration_url(quiz: params[:quiz_id]))
+    @quiz = Quiz.find_by(playable: true)
   end
 
   def close_quiz
