@@ -1,0 +1,6 @@
+function displayQuestion() {
+  const question = document.getElementById('question');
+  question.innerHTML = "<%= j render 'players/games/question', question: @question, game: @game, game_answer: @game_answer %>"
+}
+
+displayQuestion();
