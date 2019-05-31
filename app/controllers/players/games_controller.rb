@@ -5,16 +5,13 @@ class Players::GamesController < Players::BaseController
     authorize [:player, @game]
     @question = @game.latest_question
     @game_answer = GameAnswer.new(game: @game)
-    if @game.save
-      respond_to do |format|
+    respond_to do |format|
+      if @game.save
         format.html { redirect_to players_game_path @game }
-        format.js
-      end
-    else
-      respond_to do |format|
+      else
         format.html { render "players/quizzes/show" }
-        format.js
       end
+      format.js
     end
   end
 
