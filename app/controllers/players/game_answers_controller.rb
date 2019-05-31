@@ -6,11 +6,16 @@ class Players::GameAnswersController < Players::BaseController
     @game_answer.game = @game
     @game_answer.ends_at = Time.zone.now
     authorize [:player, @game_answer]
-    if @game_answer.save
-      redirect_to players_game_path @game
-    else
-      @question = @game_answer.answer.question
-      render "players/games/show"
+    respond_to do |format|
+      if @game_answer.save
+        @game_answer = GameAnswer.new
+        @question = @game.latest_question
+        format.html { redirect_to players_game_path @game }
+      else
+        @question = @game_answer.answer.question
+        format.html { render "players/games/show" }
+      end
+      format.js { render "players/games/create" }
     end
   end
 

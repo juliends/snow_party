@@ -3,10 +3,15 @@ class Players::GamesController < Players::BaseController
     @quiz = Quiz.find_by(playable: true)
     @game = Game.new(quiz: @quiz, player: current_player)
     authorize [:player, @game]
-    if @game.save
-      redirect_to players_game_path @game
-    else
-      render "players/quizzes/show"
+    @question = @game.latest_question
+    @game_answer = GameAnswer.new(game: @game)
+    respond_to do |format|
+      if @game.save
+        format.html { redirect_to players_game_path @game }
+      else
+        format.html { render "players/quizzes/show" }
+      end
+      format.js
     end
   end
 

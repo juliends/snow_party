@@ -1,0 +1,15 @@
+function displayQuestion(newQuestion) {
+  const question = document.getElementById('question');
+  question.innerHTML = newQuestion;
+}
+
+function displayQuizResults() {
+  const gameId = document.querySelector('#question > div').dataset.gameId;
+  window.location.href = '/players/games/' + gameId + '/results';
+}
+
+<% if @question.nil? %>
+  displayQuizResults();
+<% else %>
+  displayQuestion("<%= j render 'players/games/question', question: @question, game: @game, game_answer: @game_answer %>");
+<% end %>
