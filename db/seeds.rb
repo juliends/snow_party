@@ -96,7 +96,7 @@ quiz = Quiz.create(
       )
 
 question1 = Question.create(content: "En 1920, sort le film A travers l'orage de David Wark Griffith, l'actrice principale était:",
-                            picture: '',
+                            picture: 'orage',
                             quiz: quiz,
                             category: 'movie')
 Answer.create(question: question1,
@@ -110,7 +110,7 @@ Answer.create(question: question1,
               correct: false)
 
 question2 = Question.create(content: "Le 31 janvier 1920 à Soissons, des spectateurs tirent au révolver sur l'écran devant un film de:",
-                            picture: '',
+                            picture: 'douglas-fairbanks',
                             quiz: quiz,
                             category: 'movie')
 Answer.create(question: question2,
@@ -124,7 +124,7 @@ Answer.create(question: question2,
               correct: false)
 
 question3 = Question.create(content: "En 1920 sort un célèbre film expressionniste:",
-                            picture: '',
+                            picture: 'caligari',
                             quiz: quiz,
                             category: 'movie')
 Answer.create(question: question3,
@@ -138,7 +138,7 @@ Answer.create(question: question3,
               correct: false)
 
 question4 = Question.create(content: "En 1920, les Frères Lumière mettent au point un procédé qu'ils font breveter:",
-                            picture: '',
+                            picture: 'lumiere',
                             quiz: quiz,
                             category: 'movie')
 Answer.create(question: question4,
@@ -165,4 +165,4 @@ Answer.create(question: question5,
               content: "Celui du SLEC",
               correct: true)
 
-
+puts "Seeded 🌱"
