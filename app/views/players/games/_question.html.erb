@@ -1,6 +1,7 @@
 <div
   class="container mobile-container d-flex flex-column justify-content-center"
   data-controller="answers"
+  data-game-id="<%= @game.id %>"
 >
   <% if question.picture.present? %>
     <div class="ml-auto mr-auto mb-4 quiz-img" style="background-image: url('<%= image_path question.picture %>')"></div>
