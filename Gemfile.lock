@@ -158,6 +158,8 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
+    rollbar (2.20.1)
+      multi_json
     rqrcode (0.10.1)
       chunky_png (~> 1.0)
     sass (3.7.2)
@@ -237,6 +239,7 @@ DEPENDENCIES
   pundit
   rails (= 5.2.2)
   redis
+  rollbar
   rqrcode
   sassc-rails
   sidekiq

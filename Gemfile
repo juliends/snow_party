@@ -19,6 +19,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'rqrcode'
 gem 'clearbit'
+gem 'rollbar'
 
 
 gem 'sidekiq'
