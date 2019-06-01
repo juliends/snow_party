@@ -28,6 +28,11 @@ class QuizzesController < ApplicationController
   def close_quiz
   end
 
+  def close
+    @quiz = Quiz.find_by(playable: true)
+    authorize @quiz
+  end
+
   private
 
   def set_desktop_display

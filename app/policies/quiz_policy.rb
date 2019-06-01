@@ -16,4 +16,8 @@ class QuizPolicy < ApplicationPolicy
   def close_quiz?
     show?
   end
+
+  def close?
+    user.admin
+  end
 end

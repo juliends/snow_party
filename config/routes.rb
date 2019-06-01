@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   resources :leads, only: :create
 
   root to: 'pages#home'
+  # Note(grmnlrt): Temporary url for Anne
+  get "close", to: "quizzes#close"
+
   resources :quizzes, only: [:index, :show, :update] do
     get "qr"
     get "close_quiz"

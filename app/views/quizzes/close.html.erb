@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="d-flex justify-content-center align-items-center">
+        <% text = @quiz.finish? ? "Reopen Quiz #{@quiz.name}" : "Close quiz #{@quiz.name}" %>
+        <%= link_to text, quiz_path(@quiz), method: :patch, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
