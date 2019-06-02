@@ -84,8 +84,8 @@ ActiveRecord::Schema.define(version: 2019_06_01_135019) do
     t.string "room"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "live_players", default: 0
     t.boolean "playable", default: false
+    t.integer "live_players", default: 0
     t.boolean "finish", default: false
     t.index ["user_id"], name: "index_quizzes_on_user_id"
   end
