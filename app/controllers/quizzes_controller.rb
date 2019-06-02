@@ -16,7 +16,7 @@ class QuizzesController < ApplicationController
     @quiz.finish = !@quiz.finish
     @quiz.save
     broadcast_notification_to_players if @quiz.finish?
-    redirect_to quiz_close_quiz_path(@quiz)
+    redirect_to close_path
   end
 
   def qr
