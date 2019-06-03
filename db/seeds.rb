@@ -109,7 +109,7 @@ Answer.create(question: question1,
               content: "Jackelyn  Paratonnere",
               correct: false)
 
-question2 = Question.create(content: "Le 31 janvier 1920 à Soissons, des spectateurs tirent au revolver sur l'écran devant un film de:",
+question2 = Question.create(content: "Le 31 janvier 1920 à Soissons, des spectateurs tirent au revolver sur l'écran devant un film avec Douglas Fairbanks:",
                             picture: 'douglas-fairbanks',
                             quiz: quiz,
                             category: 'movie')
@@ -129,13 +129,13 @@ question3 = Question.create(content: "En 1920 sort un célèbre film expressionn
                             category: 'movie')
 Answer.create(question: question3,
               content: "Le cabinet du Dr Mabuse",
-              correct: true)
+              correct: false)
 Answer.create(question: question3,
               content: "Le cabinet du Dr House",
               correct: false)
 Answer.create(question: question3,
               content: "Le cabinet du Dr Caligari",
-              correct: false)
+              correct: true)
 
 question4 = Question.create(content: "En 1920, les Frères Lumière mettent au point un procédé qu'ils font breveter:",
                             picture: 'lumiere',
