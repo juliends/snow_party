@@ -4,7 +4,7 @@ Answer.destroy_all
 Question.destroy_all
 Quiz.destroy_all
 # User.destroy_all
-# Player.destroy_all
+Player.destroy_all
 
 # owner = User.create(email: "dimitri@lewagon.org", password: "lewagon")
 

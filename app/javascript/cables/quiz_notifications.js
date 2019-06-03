@@ -19,7 +19,6 @@ const displayMessage = () => {
   const current_player_id = document.getElementById('player_screen').dataset.currentPlayerId;
   // const winner_id = container.dataset.winnerId;
   const winner_ids = container.dataset.winnerId.split(',');
-  debugger
   const winner_name = container.dataset.winnerName;
   // if (current_player_id === winner_id) {
   if (winner_ids.includes(current_player_id)) {
