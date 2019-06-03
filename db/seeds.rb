@@ -1,8 +1,8 @@
-# GameAnswer.destroy_all
-# Game.destroy_all
-# Answer.destroy_all
-# Question.destroy_all
-# Quiz.destroy_all
+GameAnswer.destroy_all
+Game.destroy_all
+Answer.destroy_all
+Question.destroy_all
+Quiz.destroy_all
 # User.destroy_all
 # Player.destroy_all
 
@@ -87,7 +87,7 @@
 
 # Seed for Lyon
 
-quiz = Quiz.create(
+quiz = Quiz.create!(
         user: User.last,
         name: "AG du SLEC",
         reward: "",
@@ -96,7 +96,7 @@ quiz = Quiz.create(
       )
 
 question1 = Question.create(content: "En 1920 sort le film 'A travers l'orage' de David Wark Griffith, l'actrice principale était:",
-                            picture: 'orage',
+                            picture: 'orage.jpg',
                             quiz: quiz,
                             category: 'movie')
 Answer.create(question: question1,
@@ -110,7 +110,7 @@ Answer.create(question: question1,
               correct: false)
 
 question2 = Question.create(content: "Le 31 janvier 1920 à Soissons, des spectateurs tirent au revolver sur l'écran devant un film avec Douglas Fairbanks:",
-                            picture: 'douglas-fairbanks',
+                            picture: 'douglas-fairbanks.jpg',
                             quiz: quiz,
                             category: 'movie')
 Answer.create(question: question2,
@@ -124,7 +124,7 @@ Answer.create(question: question2,
               correct: false)
 
 question3 = Question.create(content: "En 1920 sort un célèbre film expressionniste:",
-                            picture: 'caligari',
+                            picture: 'caligari.jpg',
                             quiz: quiz,
                             category: 'movie')
 Answer.create(question: question3,
@@ -138,7 +138,7 @@ Answer.create(question: question3,
               correct: true)
 
 question4 = Question.create(content: "En 1920, les Frères Lumière mettent au point un procédé qu'ils font breveter:",
-                            picture: 'lumiere',
+                            picture: 'lumiere.jpg',
                             quiz: quiz,
                             category: 'movie')
 Answer.create(question: question4,
@@ -152,7 +152,7 @@ Answer.create(question: question4,
               correct: false)
 
 question5 = Question.create(content: "Quel est votre centenaire anniversaire préféré ?",
-                            picture: '',
+                            picture: 'cake.png',
                             quiz: quiz,
                             category: 'movie')
 Answer.create(question: question5,
