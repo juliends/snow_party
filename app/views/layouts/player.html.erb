@@ -14,7 +14,7 @@
   <body class="background-player" id="player_screen" data-current-player-id="<%= current_player&.id %>" data-quiz-id="<%= quiz.id %>">
     <% if quiz.finish? %>
       <%= render 'shared/end_game_screen',
-        winner_id: quiz.games.where.not(score: 0).order(score: :desc).first.player_id,
+        winner_id: quiz.games.where.not(score: 0).order(score: :desc).first(20).map(&:player_id).uniq.join(','),
         winner_name: quiz.games.where.not(score: 0).order(score: :desc).first.player.username
       %>
     <% else %>
