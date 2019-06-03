@@ -95,7 +95,7 @@ quiz = Quiz.create(
         playable: true
       )
 
-question1 = Question.create(content: "En 1920, sort le film A travers l'orage de David Wark Griffith, l'actrice principale était:",
+question1 = Question.create(content: "En 1920 sort le film 'A travers l'orage' de David Wark Griffith, l'actrice principale était:",
                             picture: 'orage',
                             quiz: quiz,
                             category: 'movie')
@@ -109,7 +109,7 @@ Answer.create(question: question1,
               content: "Jackelyn  Paratonnere",
               correct: false)
 
-question2 = Question.create(content: "Le 31 janvier 1920 à Soissons, des spectateurs tirent au révolver sur l'écran devant un film de:",
+question2 = Question.create(content: "Le 31 janvier 1920 à Soissons, des spectateurs tirent au revolver sur l'écran devant un film de:",
                             picture: 'douglas-fairbanks',
                             quiz: quiz,
                             category: 'movie')
@@ -117,7 +117,7 @@ Answer.create(question: question2,
               content: "Luc Besson",
               correct: false)
 Answer.create(question: question2,
-              content: "Victor Flemings",
+              content: "Victor Fleming",
               correct: true)
 Answer.create(question: question2,
               content: "John Ford",
@@ -128,13 +128,13 @@ question3 = Question.create(content: "En 1920 sort un célèbre film expressionn
                             quiz: quiz,
                             category: 'movie')
 Answer.create(question: question3,
-              content: "Le cabinet du Docteur Mabuse",
+              content: "Le cabinet du Dr Mabuse",
               correct: true)
 Answer.create(question: question3,
-              content: "Le cabinet du Docteur House",
+              content: "Le cabinet du Dr House",
               correct: false)
 Answer.create(question: question3,
-              content: "Le cabinet du Docteur Caligari",
+              content: "Le cabinet du Dr Caligari",
               correct: false)
 
 question4 = Question.create(content: "En 1920, les Frères Lumière mettent au point un procédé qu'ils font breveter:",
@@ -159,10 +159,10 @@ Answer.create(question: question5,
               content: "Celui de Kirk Douglas",
               correct: false)
 Answer.create(question: question5,
-              content: "1995 : celui de l'invention du cinéma",
+              content: "1995, l'invention du cinéma",
               correct: false)
 Answer.create(question: question5,
-              content: "Celui du SLEC",
+              content: "Les 100 ans du SLEC",
               correct: true)
 
 puts "Seeded 🌱"
