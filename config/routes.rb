@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # Note(grmnlrt): Temporary url for Anne
   get "close", to: "quizzes#close"
+  get "qr", to: "quizzes#qr"
 
   resources :quizzes, only: [:index, :show, :update] do
     get "qr"
