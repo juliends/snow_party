@@ -8,7 +8,7 @@ class Player < ApplicationRecord
   has_many :game_answers, through: :games
   has_many :quizzes, through: :games
 
-  after_create_commit :enrich_player
+  # after_create_commit :enrich_player
   after_create_commit :crate_lead
 
   def username
