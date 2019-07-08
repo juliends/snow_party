@@ -18,6 +18,6 @@ class QuizPolicy < ApplicationPolicy
   end
 
   def close?
-    user.admin
+    true
   end
 end
