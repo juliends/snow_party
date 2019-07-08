@@ -8,6 +8,8 @@ Player.destroy_all
 
 owner = User.create(email: "dimitri@lewagon.org", password: "lewagon")
 
+player = Player.create(email: 'anne@cinema.fr', disabled: true)
+
 # quiz = Quiz.create(
 #         user: owner,
 #         name: "L'Homme Fidèle",
@@ -173,7 +175,8 @@ quiz = Quiz.create!(
         name: "Les Hirondelles de Kaboul",
         reward: "",
         room: "1",
-        playable: true
+        playable: true,
+        school: true
       )
 
 question1 = Question.create(content: "Vous allez voir “Les Hirondelles de Kaboul”. Où se déroule l’action du film ?",

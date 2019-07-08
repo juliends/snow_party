@@ -4,6 +4,9 @@ class Game < ApplicationRecord
   has_many :game_answers
   has_many :answers, through: :game_answers
 
+  scope :only_valid, -> { includes(:player).where(players: { disabled: false}) }
+  scope :positive_score, -> { where.not(score: 0) }
+
   scope :time_related, -> (other_game) { where("created_at >= ?", other_game.created_at - 10.minutes).where("created_at <= ?", other_game.created_at + 10.minutes) }
 
   def latest_question
