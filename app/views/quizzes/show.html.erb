@@ -32,7 +32,7 @@
           </tr>
         </thead>
         <tbody>
-          <% @quiz.players.uniq.each do |player| %>
+          <% @quiz.players.uniq.each_with_index do |player, index| %>
               <tr class="<%= 'leader-dashboard' if index == 0 %>">
                 <td><%= player.email %></td>
                 <td class="font-weight-light">
