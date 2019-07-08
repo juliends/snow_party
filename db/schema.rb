@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_08_203911) do
+ActiveRecord::Schema.define(version: 2019_07_08_210230) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,8 @@ ActiveRecord::Schema.define(version: 2019_07_08_203911) do
     t.string "location"
     t.boolean "disabled", default: false
     t.boolean "gdpr_approval", default: false
+    t.string "name"
+    t.string "classroom"
     t.index ["email"], name: "index_players_on_email", unique: true
     t.index ["reset_password_token"], name: "index_players_on_reset_password_token", unique: true
   end
@@ -89,6 +91,7 @@ ActiveRecord::Schema.define(version: 2019_07_08_203911) do
     t.boolean "playable", default: false
     t.integer "live_players", default: 0
     t.boolean "finish", default: false
+    t.boolean "school", default: false
     t.index ["user_id"], name: "index_quizzes_on_user_id"
   end
 

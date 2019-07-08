@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
 
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:gdpr_approval])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:gdpr_approval, :name, :classroom])
   end
 
   # Only for sign in/up of User

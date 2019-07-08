@@ -175,7 +175,8 @@ quiz = Quiz.create!(
         name: "Les Hirondelles de Kaboul",
         reward: "",
         room: "1",
-        playable: true
+        playable: true,
+        school: true
       )
 
 question1 = Question.create(content: "Vous allez voir “Les Hirondelles de Kaboul”. Où se déroule l’action du film ?",

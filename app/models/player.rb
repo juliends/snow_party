@@ -15,7 +15,7 @@ class Player < ApplicationRecord
   after_create_commit :crate_lead
 
   def username
-    email.split('@').first
+    name.present? ? name : email.split('@').first
   end
 
   private

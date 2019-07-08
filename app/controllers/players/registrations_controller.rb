@@ -6,12 +6,13 @@ class Players::RegistrationsController < Devise::RegistrationsController
   layout 'player'
   # GET /resource/sign_up
   def new
-    @quiz = params[:quiz]
+    @quiz = Quiz.last
     super
   end
 
   # POST /resource
   def create
+    @quiz = Quiz.last
     player = Player.find_by(email: params[:player][:email])
     if player.nil?
       super
