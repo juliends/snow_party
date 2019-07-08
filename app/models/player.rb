@@ -8,6 +8,9 @@ class Player < ApplicationRecord
   has_many :game_answers, through: :games
   has_many :quizzes, through: :games
 
+  validates :gdpr_approval, inclusion: { in: [true],
+    message: "Vous devez accepter les conditions pour jouer au quiz" }
+
   # after_create_commit :enrich_player
   after_create_commit :crate_lead
 

@@ -16,6 +16,7 @@
                         },
                         label: false,
                         placeholder: "Email" %>
+            <%= f.input :gdpr_approval, label: 'En utilisant ce formulaire, vous acceptez que nous stockions vos données sur ce site web', label_html: {class: 'text-white'} %>
             <%= f.input :quiz, as: :hidden, input_html: { value: @quiz } %>
           </div>
           <div class="form-actions text-center mt-4">
