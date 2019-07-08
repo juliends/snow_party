@@ -4,7 +4,7 @@ class Players::ResultsController < Players::BaseController
   def index
     @quiz = Game.find(params[:game_id]).quiz
     nasty_array = []
-    @games = @quiz.games.where.not(score: 0).order(score: :desc).reject do |game|
+    @games = @quiz.games.only_valid.positive_score.order(score: :desc).reject do |game|
       test = nasty_array.include?(game.player_id)
       nasty_array << game.player_id
       test
