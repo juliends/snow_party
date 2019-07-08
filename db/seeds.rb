@@ -8,6 +8,8 @@ Player.destroy_all
 
 owner = User.create(email: "dimitri@lewagon.org", password: "lewagon")
 
+player = Player.create(email: 'anne@cinema.fr', disabled: true)
+
 quiz = Quiz.create(
         user: owner,
         name: "L'Homme Fidèle",
