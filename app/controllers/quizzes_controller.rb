@@ -40,7 +40,7 @@ class QuizzesController < ApplicationController
   end
 
   def set_quiz
-    @quiz = Quiz.find_by(playable: true)
+    @quiz = Quiz.includes(:games).find_by(playable: true)
     authorize @quiz
   end
 
