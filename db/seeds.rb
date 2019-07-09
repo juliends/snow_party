@@ -172,67 +172,81 @@ player = Player.create(email: 'anne@cinema.fr', disabled: true)
 
 quiz = Quiz.create!(
         user: User.last,
-        name: "Les Hirondelles de Kaboul",
+        name: "Daniel Darc, Pieces of my life",
         reward: "",
         room: "1",
         playable: true,
-        school: true
+        school: false
       )
 
-question1 = Question.create(content: "Vous allez voir “Les Hirondelles de Kaboul”. Où se déroule l’action du film ?",
-                            picture: 'photo1.jpg',
+question1 = Question.create(content: "Le véritable nom de Daniel Darc était:",
+                            picture: 'q1.jpg',
                             quiz: quiz,
                             category: 'movie')
 Answer.create(question: question1,
-              content: "En France",
+              content: "Daniele Rizzi",
               correct: false)
 Answer.create(question: question1,
-              content: "Au Pakistan",
+              content: " Michel Darque",
               correct: false)
 Answer.create(question: question1,
-              content: "En Afghanistan",
+              content: "Daniel Rozoum",
               correct: true)
 
-question2 = Question.create(content: "Comment s’appelle le vêtement que les femmes devaient porter sous le régime des talibans à Kaboul ?",
-                            picture: 'photo5.jpg',
+question2 = Question.create(content: " En quelle année est sorti le premier single de Taxi Girl single chercher le garçon ?",
+                            picture: 'q2.jpg',
                             quiz: quiz,
                             category: 'movie')
 Answer.create(question: question2,
-              content: "Le hijab (ou voile)",
-              correct: false)
-Answer.create(question: question2,
-              content: "Le Tchadri (ou la Burqa)",
+              content: "80",
               correct: true)
 Answer.create(question: question2,
-              content: "La Djellaba",
+              content: "83",
+              correct: false)
+Answer.create(question: question2,
+              content: "85",
               correct: false)
 
-question3 = Question.create(content: "En quelle langue le livre Les hirondelles de Kaboul a-t-il été  écrit ?",
-                            picture: 'couv_livre.jpg',
+question3 = Question.create(content: "Un autre ancien membre de Taxi girl a collaboré avec les plus grands artiste internationaux. Quel-est son nom ?",
+                            picture: 'q3.jpg',
                             quiz: quiz,
                             category: 'movie')
 Answer.create(question: question3,
-              content: "en arabe",
-              correct: false)
-Answer.create(question: question3,
-              content: "en français",
+              content: "Mirwais",
               correct: true)
 Answer.create(question: question3,
-              content: "en dari",
+              content: "Jacno",
+              correct: false)
+Answer.create(question: question3,
+              content: "Fred Chichini",
               correct: false)
 
-question4 = Question.create(content: "L’auteur du livre a signé ce roman sous le pseudonyme de Yasmina Khadra. Parmi ces écrivains célèbres, lequel n’est pas un pseudonyme ?",
-                            picture: 'yasmina_khadra.jpg',
+question4 = Question.create(content: "En 2004, l’album qui signe le grand retour de Daniel Darc s’intitule ?",
+                            picture: 'q4.jpg',
                             quiz: quiz,
                             category: 'movie')
 Answer.create(question: question4,
-              content: "Simone de Beauvoir",
-              correct: true)
-Answer.create(question: question4,
-              content: "George Sand",
+              content: "Chapelle Sixteen",
               correct: false)
 Answer.create(question: question4,
-              content: "Romain Gary",
+              content: "Crèvecoeur",
+              correct: true)
+Answer.create(question: question4,
+              content: "Nijinski",
+              correct: false)
+
+question5 = Question.create(content: "Dans quelle catégorie Daniel Darc a-t-il remporté une victoire de la musique en 2005 ?",
+                            picture: 'q5.jpg',
+                            quiz: quiz,
+                            category: 'movie')
+Answer.create(question: question5,
+              content: "Album Rock",
+              correct: false)
+Answer.create(question: question5,
+              content: "Album Révélation",
+              correct: true)
+Answer.create(question: questio54,
+              content: "Artiste interprète masculin",
               correct: false)
 
 puts "Seeded 🌱"
