@@ -245,7 +245,7 @@ Answer.create(question: question5,
 Answer.create(question: question5,
               content: "Album Révélation",
               correct: true)
-Answer.create(question: questio54,
+Answer.create(question: question5,
               content: "Artiste interprète masculin",
               correct: false)
 
