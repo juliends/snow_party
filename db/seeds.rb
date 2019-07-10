@@ -229,7 +229,7 @@ Answer.create(question: question4,
               content: "Chapelle Sixteen",
               correct: false)
 Answer.create(question: question4,
-              content: "Crèvecoeur",
+              content: "Crèvecœur",
               correct: true)
 Answer.create(question: question4,
               content: "Nijinski",
