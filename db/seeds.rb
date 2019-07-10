@@ -187,7 +187,7 @@ Answer.create(question: question1,
               content: "Daniele Rizzi",
               correct: false)
 Answer.create(question: question1,
-              content: " Michel Darque",
+              content: "Michel Darque",
               correct: false)
 Answer.create(question: question1,
               content: "Daniel Rozoum",
@@ -207,7 +207,7 @@ Answer.create(question: question2,
               content: "85",
               correct: false)
 
-question3 = Question.create(content: "Un autre ancien membre de Taxi girl a collaboré avec les plus grands artistes internationaux. Quel-est son nom ?",
+question3 = Question.create(content: "Un autre ancien membre de Taxi Girl a collaboré avec les plus grands artistes internationaux. Quel-est son nom ?",
                             picture: 'q3.jpg',
                             quiz: quiz,
                             category: 'movie')
