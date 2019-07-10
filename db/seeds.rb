@@ -193,7 +193,7 @@ Answer.create(question: question1,
               content: "Daniel Rozoum",
               correct: true)
 
-question2 = Question.create(content: " En quelle année est sorti le premier single de Taxi Girl single chercher le garçon ?",
+question2 = Question.create(content: "En quelle année, est sorti le premier single de Taxi Girl: « Cherchez le garçon » ?",
                             picture: 'q2.jpg',
                             quiz: quiz,
                             category: 'movie')
@@ -207,7 +207,7 @@ Answer.create(question: question2,
               content: "85",
               correct: false)
 
-question3 = Question.create(content: "Un autre ancien membre de Taxi girl a collaboré avec les plus grands artiste internationaux. Quel-est son nom ?",
+question3 = Question.create(content: "Un autre ancien membre de Taxi girl a collaboré avec les plus grands artistes internationaux. Quel-est son nom ?",
                             picture: 'q3.jpg',
                             quiz: quiz,
                             category: 'movie')
