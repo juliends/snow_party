@@ -218,7 +218,7 @@ Answer.create(question: question3,
               content: "Jacno",
               correct: false)
 Answer.create(question: question3,
-              content: "Fred Chichini",
+              content: "Fred Chichin",
               correct: false)
 
 question4 = Question.create(content: "En 2004, l’album qui signe le grand retour de Daniel Darc s’intitule ?",
