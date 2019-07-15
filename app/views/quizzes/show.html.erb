@@ -48,7 +48,7 @@
                   <%= display_player_confort(player.games.find_by(quiz: @quiz)) == 'Oui' ? "<i class='fas fa-check'></i>".html_safe : "<i class='fas fa-times'></i>".html_safe %>
                 </td>
                 <td class="font-weight-bold">
-                  <%= player.games.find_by(quiz: @quiz).score %>
+                  <%= player.games.positive_score.find_by(quiz: @quiz).score %>
                 </td>
               </tr>
           <% end %>
