@@ -1,10 +1,13 @@
 <div class="container">
-  <div class="row">
-    <div class="col-12">
-      <div class="d-flex justify-content-center align-items-center full-height">
+  <div class="row mt-5">
+    <div class="col-12 mt-5 pt-5">
+      <!-- <div class="d-flex justify-content-center align-items-center full-height"> -->
         <% text = @quiz.finish? ? "Reopen Quiz #{@quiz.name}" : "Close quiz #{@quiz.name}" %>
-        <%= link_to text, quiz_path(@quiz), method: :patch, class: "btn btn-primary btn-lg btn-block", data: { confirm: "Are you sure?"} %>
-      </div>
+        <%= link_to text, quiz_path(@quiz), method: :patch, class: "btn btn-#{'outline-' if @quiz.finish? }primary btn-lg btn-block", data: { confirm: "Are you sure?"} %>
+        <% if @quiz.finish? %>
+          <%= link_to 'See the winners', quiz_path(Quiz.last), class: 'btn btn-primary btn-lg btn-block mt-5' %>
+        <% end %>
+      <!-- </div> -->
     </div>
   </div>
 </div>

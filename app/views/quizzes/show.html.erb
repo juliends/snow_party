@@ -32,23 +32,23 @@
           </tr>
         </thead>
         <tbody>
-          <% @quiz.players.order('games.score').uniq.reverse.each_with_index do |player, index| %>
+          <% @quiz.games.positive_score.order(score: :desc).each_with_index do |game, index| %>
               <tr class="<%= 'leader-dashboard' if (0...3).to_a.include?(index) %>">
-                <td><%= player.email %></td>
+                <td><%= game.player.email %></td>
                 <td class="font-weight-light">
-                  <%= player.last_name || "Non renseigné" %>
+                  <%= game.player.last_name || "Non renseigné" %>
                 </td>
                 <td class="font-weight-light">
-                  <%= player.first_name || "Non renseigné" %>
+                  <%= game.player.first_name || "Non renseigné" %>
                 </td>
                 <td class="font-weight-light">
-                  <%= player.location || "N/A" %>
+                  <%= game.player.location || "N/A" %>
                 </td>
                 <td>
-                  <%= display_player_confort(player.games.find_by(quiz: @quiz)) == 'Oui' ? "<i class='fas fa-check'></i>".html_safe : "<i class='fas fa-times'></i>".html_safe %>
+                  <%= display_player_confort(game) == 'Oui' ? "<i class='fas fa-check'></i>".html_safe : "<i class='fas fa-times'></i>".html_safe %>
                 </td>
                 <td class="font-weight-bold">
-                  <%= player.games.positive_score.find_by(quiz: @quiz).score %>
+                  <%= game.score %>
                 </td>
               </tr>
           <% end %>
