@@ -170,83 +170,163 @@ player = Player.create(email: 'anne@cinema.fr', disabled: true)
 
 # Seed for Hirondelles
 
-quiz = Quiz.create!(
-        user: User.last,
-        name: "Daniel Darc, Pieces of my life",
-        reward: "",
-        room: "1",
-        playable: true,
-        school: false
-      )
+# quiz = Quiz.create!(
+#         user: User.last,
+#         name: "Daniel Darc, Pieces of my life",
+#         reward: "",
+#         room: "1",
+#         playable: true,
+#         school: false
+#       )
 
-question1 = Question.create(content: "Le véritable nom de Daniel Darc était:",
+# question1 = Question.create(content: "Le véritable nom de Daniel Darc était:",
+#                             picture: 'q1.jpg',
+#                             quiz: quiz,
+#                             category: 'movie')
+# Answer.create(question: question1,
+#               content: "Daniele Rizzi",
+#               correct: false)
+# Answer.create(question: question1,
+#               content: "Michel Darque",
+#               correct: false)
+# Answer.create(question: question1,
+#               content: "Daniel Rozoum",
+#               correct: true)
+
+# question2 = Question.create(content: "En quelle année, est sorti le premier single de Taxi Girl: « Cherchez le garçon » ?",
+#                             picture: 'q2.jpg',
+#                             quiz: quiz,
+#                             category: 'movie')
+# Answer.create(question: question2,
+#               content: "80",
+#               correct: true)
+# Answer.create(question: question2,
+#               content: "83",
+#               correct: false)
+# Answer.create(question: question2,
+#               content: "85",
+#               correct: false)
+
+# question3 = Question.create(content: "Un autre ancien membre de Taxi Girl a collaboré avec les plus grands artistes internationaux. Quel-est son nom ?",
+#                             picture: 'q3.jpg',
+#                             quiz: quiz,
+#                             category: 'movie')
+# Answer.create(question: question3,
+#               content: "Mirwais",
+#               correct: true)
+# Answer.create(question: question3,
+#               content: "Jacno",
+#               correct: false)
+# Answer.create(question: question3,
+#               content: "Fred Chichin",
+#               correct: false)
+
+# question4 = Question.create(content: "En 2004, l’album qui signe le grand retour de Daniel Darc s’intitule ?",
+#                             picture: 'q4.jpg',
+#                             quiz: quiz,
+#                             category: 'movie')
+# Answer.create(question: question4,
+#               content: "Chapelle Sixteen",
+#               correct: false)
+# Answer.create(question: question4,
+#               content: "Crèvecœur",
+#               correct: true)
+# Answer.create(question: question4,
+#               content: "Nijinski",
+#               correct: false)
+
+# question5 = Question.create(content: "Dans quelle catégorie Daniel Darc a-t-il remporté une victoire de la musique en 2005 ?",
+#                             picture: 'q5.jpg',
+#                             quiz: quiz,
+#                             category: 'movie')
+# Answer.create(question: question5,
+#               content: "Album Rock",
+#               correct: false)
+# Answer.create(question: question5,
+#               content: "Album Révélation",
+#               correct: true)
+# Answer.create(question: question5,
+#               content: "Artiste interprète masculin",
+#               correct: false)
+
+
+quiz = Quiz.create!(
+  user: User.last,
+  name: "Les Hirondelles de Kaboul",
+  reward: "",
+  room: "1",
+  playable: true,
+  school: false
+)
+
+question1 = Question.create!(content: "Vous allez voir “Les Hirondelles de Kaboul”. Où se déroule l’action du film ?",
                             picture: 'q1.jpg',
                             quiz: quiz,
                             category: 'movie')
-Answer.create(question: question1,
-              content: "Daniele Rizzi",
+
+Answer.create!(question: question1,
+              content: "En France",
               correct: false)
-Answer.create(question: question1,
-              content: "Michel Darque",
+
+Answer.create!(question: question1,
+              content: "Au Pakistan",
               correct: false)
-Answer.create(question: question1,
-              content: "Daniel Rozoum",
+
+Answer.create!(question: question1,
+              content: "en Afghanistan",
               correct: true)
 
-question2 = Question.create(content: "En quelle année, est sorti le premier single de Taxi Girl: « Cherchez le garçon » ?",
+
+question2 = Question.create!(content: "Comment s’appelle le vêtement que les femmes devaient porter sous le régime des talibans à Kaboul?",
                             picture: 'q2.jpg',
                             quiz: quiz,
                             category: 'movie')
-Answer.create(question: question2,
-              content: "80",
-              correct: true)
-Answer.create(question: question2,
-              content: "83",
-              correct: false)
-Answer.create(question: question2,
-              content: "85",
+
+Answer.create!(question: question2,
+              content: "Le hijab (ou voile)",
               correct: false)
 
-question3 = Question.create(content: "Un autre ancien membre de Taxi Girl a collaboré avec les plus grands artistes internationaux. Quel-est son nom ?",
+Answer.create!(question: question2,
+              content: "Le Tchadri (ou la Burqa)",
+              correct: true)
+
+Answer.create!(question: question2,
+              content: "La Djellaba",
+              correct: false)
+
+question3 = Question.create!(content: "En quelle langue le livre Les hirondelles de Kaboul a-t-il été écrit ?",
                             picture: 'q3.jpg',
                             quiz: quiz,
                             category: 'movie')
-Answer.create(question: question3,
-              content: "Mirwais",
-              correct: true)
-Answer.create(question: question3,
-              content: "Jacno",
-              correct: false)
-Answer.create(question: question3,
-              content: "Fred Chichin",
+
+Answer.create!(question: question3,
+              content: "en arabe",
               correct: false)
 
-question4 = Question.create(content: "En 2004, l’album qui signe le grand retour de Daniel Darc s’intitule ?",
+Answer.create!(question: question3,
+              content: "en français",
+              correct: true)
+
+Answer.create!(question: question3,
+              content: "en dari",
+              correct: false)
+
+question4 = Question.create!(content: "L’auteur du roman signe le livre sous le nom de Yasmina Khadra. D’où vient ce nom ?",
                             picture: 'q4.jpg',
                             quiz: quiz,
                             category: 'movie')
-Answer.create(question: question4,
-              content: "Chapelle Sixteen",
-              correct: false)
-Answer.create(question: question4,
-              content: "Crèvecœur",
-              correct: true)
-Answer.create(question: question4,
-              content: "Nijinski",
+
+Answer.create!(question: question4,
+              content: "le vrai nom de l’auteur",
               correct: false)
 
-question5 = Question.create(content: "Dans quelle catégorie Daniel Darc a-t-il remporté une victoire de la musique en 2005 ?",
-                            picture: 'q5.jpg',
-                            quiz: quiz,
-                            category: 'movie')
-Answer.create(question: question5,
-              content: "Album Rock",
-              correct: false)
-Answer.create(question: question5,
-              content: "Album Révélation",
+Answer.create!(question: question4,
+              content: "les 2 prénoms de sa femme",
               correct: true)
-Answer.create(question: question5,
-              content: "Artiste interprète masculin",
+
+Answer.create!(question: question4,
+              content: "le nom d’un de ses personnages",
               correct: false)
+
 
 puts "Seeded 🌱"
