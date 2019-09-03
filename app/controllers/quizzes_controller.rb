@@ -49,7 +49,7 @@ class QuizzesController < ApplicationController
       message_partial: ApplicationController.renderer.render(
         partial: "shared/end_game_screen",
         locals: {
-          winner_id: @quiz.games.where.not(score: 0).order(score: :desc).first(3).map(&:player_id).uniq.join(','),
+          winner_id: @quiz.games.where.not(score: 0).order(score: :desc).first.player_id,
           winner_name: @quiz.games.where.not(score: 0).order(score: :desc).first.player.username.capitalize
         }
       )
