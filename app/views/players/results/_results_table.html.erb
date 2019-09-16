@@ -9,7 +9,7 @@
   </thead>
   <tbody>
     <% games.each_with_index do |game, index| %>
-      <tr class="<%= 'leader' if (0...3).to_a.include?(index) %>" data-player-id="<%= game.player.id %>">
+      <tr class="<%= 'leader' if index == 0 %>" data-player-id="<%= game.player.id %>">
         <th scope="row" class="text-white"><%= index + 1 %></th>
         <td><i class="fas fa-trophy"></i></td>
         <td><%= game.player.username.capitalize %></td>

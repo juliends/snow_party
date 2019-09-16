@@ -18,10 +18,10 @@ const displayMessage = () => {
   const container = document.getElementById('end_game_screen');
   const current_player_id = document.getElementById('player_screen').dataset.currentPlayerId;
   const winner_id = container.dataset.winnerId;
-  const winner_ids = container.dataset.winnerId.split(',');
-  // const winner_name = container.dataset.winnerName;
-  // if (current_player_id === winner_id) {
-  if (winner_ids.includes(current_player_id)) {
+  // const winner_ids = container.dataset.winnerId.split(',');
+  const winner_name = container.dataset.winnerName;
+  if (current_player_id === winner_id) {
+  // if (winner_ids.includes(current_player_id)) {
     container.classList.add('win');
     container.innerHTML = `
       <p class="emoji">🏆</p>

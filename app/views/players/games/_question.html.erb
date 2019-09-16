@@ -6,7 +6,7 @@
   <% if question.picture.present? %>
     <div class="ml-auto mr-auto mb-4 quiz-img" style="background-image: url('<%= image_path question.picture %>')"></div>
   <% end %>
-  <h5 class="text-center text-light mb-4">
+  <h5 class="text-center text-light mb-4 question-content">
     <%= question.content %>
   </h5>
   <div class="row justify-content-center">

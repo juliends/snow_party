@@ -277,7 +277,7 @@ Answer.create!(question: question1,
               correct: true)
 
 
-question2 = Question.create!(content: "Comment s’appelle le vêtement que les femmes devaient porter sous le régime des talibans à Kaboul?",
+question2 = Question.create!(content: "Comment s’appelle le vêtement que les femmes devaient porter sous le régime des talibans à Kaboul ?",
                             picture: 'q2.jpg',
                             quiz: quiz,
                             category: 'movie')
@@ -311,13 +311,13 @@ Answer.create!(question: question3,
               content: "en dari",
               correct: false)
 
-question4 = Question.create!(content: "L’auteur du roman signe le livre sous le nom de Yasmina Khadra. D’où vient ce nom ?",
+question4 = Question.create!(content: "L’auteur du roman signe sous le pseudonyme de Yasmina Khadra. D’où vient ce nom?",
                             picture: 'q4.jpg',
                             quiz: quiz,
                             category: 'movie')
 
 Answer.create!(question: question4,
-              content: "le vrai nom de l’auteur",
+              content: "Un anagramme",
               correct: false)
 
 Answer.create!(question: question4,
@@ -325,7 +325,7 @@ Answer.create!(question: question4,
               correct: true)
 
 Answer.create!(question: question4,
-              content: "le nom d’un de ses personnages",
+              content: "Son héroïne",
               correct: false)
 
 
