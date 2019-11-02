@@ -339,7 +339,7 @@ quiz = Quiz.create!(
 )
 
 question1 = Question.create!(content: "Quelle nouvelle Edgar Allan Poe n'a pas écrite ?",
-                            picture: 'q1.jpg',
+                            picture: 'american-gothic-1.jpg',
                             quiz: quiz,
                             category: 'movie')
 
@@ -357,7 +357,7 @@ Answer.create!(question: question1,
 
 
 question2 = Question.create!(content: "Qui est l'actrice qui interprète le personnage de Laura Palmer dans la série TWIN PEAKS  [de David Lynch et Marc Frost] ?",
-                            picture: 'q2.jpg',
+                            picture: 'american-gothic-2.jpg',
                             quiz: quiz,
                             category: 'movie')
 
@@ -374,7 +374,7 @@ Answer.create!(question: question2,
               correct: false)
 
 question3 = Question.create!(content: "En quelle année Charles Burns a-t-il publié le premier tome de BLACK HOLE ?",
-                            picture: 'q3.jpg',
+                            picture: 'american-gothic-3.jpg',
                             quiz: quiz,
                             category: 'movie')
 
@@ -391,7 +391,7 @@ Answer.create!(question: question3,
               correct: false)
 
 question4 = Question.create!(content: "Qui n’a pas joué dans le film GÉNÉRATION REBELLE [(DAZED AND CONFUSED)] de Richard Linklater en 1993 ?",
-                            picture: 'q4.jpg',
+                            picture: 'american-gothic-4.jpg',
                             quiz: quiz,
                             category: 'movie')
 
@@ -409,7 +409,7 @@ Answer.create!(question: question4,
 
 
 question5 = Question.create!(content: "Qui est l'auteur du célèbre tableau "American Gothic" représentant un fermier et sa femme [à l’air austère] tenant une fourche dans la main ?",
-                            picture: 'q4.jpg',
+                            picture: 'american-gothic-5.jpg',
                             quiz: quiz,
                             category: 'movie')
 
