@@ -408,7 +408,7 @@ Answer.create!(question: question4,
               correct: false)
 
 
-question5 = Question.create!(content: "Qui est l'auteur du célèbre tableau "American Gothic" représentant un fermier et sa femme [à l’air austère] tenant une fourche dans la main ?",
+question5 = Question.create!(content: "Qui est l'auteur du célèbre tableau \"American Gothic\" représentant un fermier et sa femme [à l’air austère] tenant une fourche dans la main ?",
                             picture: 'american-gothic-5.jpg',
                             quiz: quiz,
                             category: 'movie')
