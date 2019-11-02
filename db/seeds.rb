@@ -9,7 +9,7 @@ Player.destroy_all
 owner = User.create(email: "dimitri@lewagon.org", password: "lewagon")
 other = User.create(email: "anne.pouliquen@distinguo.eu", password: "cinepursuit")
 
-player = Player.create!(email: 'anne@cinema.fr', disabled: true)
+player = Player.create(email: 'anne@cinema.fr', disabled: true)
 
 # quiz = Quiz.create(
 #         user: owner,
