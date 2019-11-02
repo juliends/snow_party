@@ -348,7 +348,7 @@ Answer.create!(question: question1,
               correct: true)
 
 Answer.create!(question: question1,
-              content: "Le scarabée d'or",
+              content: "Le Scarabée d'or",
               correct: false)
 
 Answer.create!(question: question1,
@@ -384,13 +384,13 @@ Answer.create!(question: question3,
 
 Answer.create!(question: question3,
               content: "1991",
-              correct: true)
+              correct: false)
 
 Answer.create!(question: question3,
               content: "1995",
-              correct: false)
+              correct: true)
 
-question4 = Question.create!(content: "Qui n’a pas joué dans le film GÉNÉRATION REBELLE [(DAZED AND CONFUSED)] de Richard Linklater en 1993 ?",
+question4 = Question.create!(content: "Qui n’a pas joué dans le film GÉNÉRATION REBELLE (DAZED AND CONFUSED) de Richard Linklater en 1993 ?",
                             picture: 'american-gothic-4.jpg',
                             quiz: quiz,
                             category: 'movie')
