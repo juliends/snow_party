@@ -33,7 +33,7 @@
         </thead>
         <tbody>
           <% @quiz.games.positive_score.order(score: :desc).each_with_index do |game, index| %>
-              <tr class="<%= 'leader-dashboard' if index == 0 %>">
+              <tr class="<%= 'leader-dashboard' if (0...3).to_a.include?(index) %>">
                 <td><%= game.player.email %></td>
                 <td class="font-weight-light">
                   <%= game.player.last_name || "Non renseigné" %>
