@@ -6,8 +6,8 @@ Quiz.destroy_all
 # User.destroy_all
 Player.destroy_all
 
-owner = User.create!(email: "dimitri@lewagon.org", password: "lewagon")
-other = User.create!(email: "anne.pouliquen@distinguo.eu", password: "cinepursuit")
+owner = User.create(email: "dimitri@lewagon.org", password: "lewagon")
+other = User.create(email: "anne.pouliquen@distinguo.eu", password: "cinepursuit")
 
 player = Player.create!(email: 'anne@cinema.fr', disabled: true)
 
