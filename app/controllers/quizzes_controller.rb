@@ -6,7 +6,7 @@ class QuizzesController < ApplicationController
   before_action :set_quiz, only: [:show, :update, :close_quiz]
 
   def index
-    @quizzes = current_user.quizzes
+    @quizzes = policy_scope(Quiz)
   end
 
   def show
