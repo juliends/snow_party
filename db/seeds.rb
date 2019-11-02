@@ -250,82 +250,179 @@ player = Player.create(email: 'anne@cinema.fr', disabled: true)
 #               correct: false)
 
 
+# quiz = Quiz.create!(
+#   user: User.last,
+#   name: "Les Hirondelles de Kaboul",
+#   reward: "",
+#   room: "1",
+#   playable: true,
+#   school: false
+# )
+
+# question1 = Question.create!(content: "Vous allez voir “Les Hirondelles de Kaboul”. Où se déroule l’action du film ?",
+#                             picture: 'q1.jpg',
+#                             quiz: quiz,
+#                             category: 'movie')
+
+# Answer.create!(question: question1,
+#               content: "En France",
+#               correct: false)
+
+# Answer.create!(question: question1,
+#               content: "Au Pakistan",
+#               correct: false)
+
+# Answer.create!(question: question1,
+#               content: "en Afghanistan",
+#               correct: true)
+
+
+# question2 = Question.create!(content: "Comment s’appelle le vêtement que les femmes devaient porter sous le régime des talibans à Kaboul ?",
+#                             picture: 'q2.jpg',
+#                             quiz: quiz,
+#                             category: 'movie')
+
+# Answer.create!(question: question2,
+#               content: "Le hijab (ou voile)",
+#               correct: false)
+
+# Answer.create!(question: question2,
+#               content: "Le Tchadri (ou la Burqa)",
+#               correct: true)
+
+# Answer.create!(question: question2,
+#               content: "La Djellaba",
+#               correct: false)
+
+# question3 = Question.create!(content: "En quelle langue le livre Les hirondelles de Kaboul a-t-il été écrit ?",
+#                             picture: 'q3.jpg',
+#                             quiz: quiz,
+#                             category: 'movie')
+
+# Answer.create!(question: question3,
+#               content: "en arabe",
+#               correct: false)
+
+# Answer.create!(question: question3,
+#               content: "en français",
+#               correct: true)
+
+# Answer.create!(question: question3,
+#               content: "en dari",
+#               correct: false)
+
+# question4 = Question.create!(content: "L’auteur du roman signe sous le pseudonyme de Yasmina Khadra. D’où vient ce nom?",
+#                             picture: 'q4.jpg',
+#                             quiz: quiz,
+#                             category: 'movie')
+
+# Answer.create!(question: question4,
+#               content: "Un anagramme",
+#               correct: false)
+
+# Answer.create!(question: question4,
+#               content: "les 2 prénoms de sa femme",
+#               correct: true)
+
+# Answer.create!(question: question4,
+#               content: "Son héroïne",
+#               correct: false)
+
+
 quiz = Quiz.create!(
   user: User.last,
-  name: "Les Hirondelles de Kaboul",
+  name: "American Gothic",
   reward: "",
   room: "1",
   playable: true,
   school: false
 )
 
-question1 = Question.create!(content: "Vous allez voir “Les Hirondelles de Kaboul”. Où se déroule l’action du film ?",
+question1 = Question.create!(content: "Quelle nouvelle Edgar Allan Poe n'a pas écrite ?",
                             picture: 'q1.jpg',
                             quiz: quiz,
                             category: 'movie')
 
 Answer.create!(question: question1,
-              content: "En France",
-              correct: false)
-
-Answer.create!(question: question1,
-              content: "Au Pakistan",
-              correct: false)
-
-Answer.create!(question: question1,
-              content: "en Afghanistan",
+              content: "Monica",
               correct: true)
 
+Answer.create!(question: question1,
+              content: "Le scarabée d'or",
+              correct: false)
 
-question2 = Question.create!(content: "Comment s’appelle le vêtement que les femmes devaient porter sous le régime des talibans à Kaboul ?",
+Answer.create!(question: question1,
+              content: "Double assassinat dans la rue Morgue",
+              correct: false)
+
+
+question2 = Question.create!(content: "Qui est l'actrice qui interprète le personnage de Laura Palmer dans la série TWIN PEAKS  [de David Lynch et Marc Frost] ?",
                             picture: 'q2.jpg',
                             quiz: quiz,
                             category: 'movie')
 
 Answer.create!(question: question2,
-              content: "Le hijab (ou voile)",
+              content: "Sherilyn Fenn",
               correct: false)
 
 Answer.create!(question: question2,
-              content: "Le Tchadri (ou la Burqa)",
+              content: "Sheryl Lee",
               correct: true)
 
 Answer.create!(question: question2,
-              content: "La Djellaba",
+              content: "Laura Dern",
               correct: false)
 
-question3 = Question.create!(content: "En quelle langue le livre Les hirondelles de Kaboul a-t-il été écrit ?",
+question3 = Question.create!(content: "En quelle année Charles Burns a-t-il publié le premier tome de BLACK HOLE ?",
                             picture: 'q3.jpg',
                             quiz: quiz,
                             category: 'movie')
 
 Answer.create!(question: question3,
-              content: "en arabe",
+              content: "1987",
               correct: false)
 
 Answer.create!(question: question3,
-              content: "en français",
+              content: "1991",
               correct: true)
 
 Answer.create!(question: question3,
-              content: "en dari",
+              content: "1995",
               correct: false)
 
-question4 = Question.create!(content: "L’auteur du roman signe sous le pseudonyme de Yasmina Khadra. D’où vient ce nom?",
+question4 = Question.create!(content: "Qui n’a pas joué dans le film GÉNÉRATION REBELLE [(DAZED AND CONFUSED)] de Richard Linklater en 1993 ?",
                             picture: 'q4.jpg',
                             quiz: quiz,
                             category: 'movie')
 
 Answer.create!(question: question4,
-              content: "Un anagramme",
-              correct: false)
-
-Answer.create!(question: question4,
-              content: "les 2 prénoms de sa femme",
+              content: "Ethan HAWKE",
               correct: true)
 
 Answer.create!(question: question4,
-              content: "Son héroïne",
+              content: "Matthew McCONAUGHEY",
+              correct: false)
+
+Answer.create!(question: question4,
+              content: "Ben AFFLECK",
+              correct: false)
+
+
+question5 = Question.create!(content: "Qui est l'auteur du célèbre tableau "American Gothic" représentant un fermier et sa femme [à l’air austère] tenant une fourche dans la main ?",
+                            picture: 'q4.jpg',
+                            quiz: quiz,
+                            category: 'movie')
+
+Answer.create!(question: question5,
+              content: "Edward HOPPER",
+              correct: false)
+
+Answer.create!(question: question5,
+              content: "Grant WOOD",
+              correct: true)
+
+Answer.create!(question: question5,
+              content: "Charles SHEELER",
               correct: false)
 
 
